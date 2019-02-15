@@ -1,6 +1,6 @@
 import React from 'react';
 
-function App() {
+function Seed() {
     return (
         <div className="componentStyle">
             <style jsx>{`
@@ -14,4 +14,4 @@ function App() {
     );
 }
 
-export default App;
+export default Seed;
