@@ -75,7 +75,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'template.ejs',
             appMountId: 'react-app-root',
-            title: 'React Help Queue',
+            title: 'CEM - Personal Portfolio',
             filename: resolve(__dirname, "build", "index.html"),
         }),
     ]
