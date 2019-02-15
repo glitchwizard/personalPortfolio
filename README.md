@@ -57,3 +57,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * [Lina Shadrach](https://github.com/LinaShadrach) and [Franz Knupfer](https://github.com/franzknupfer) or answering my endless questions in class
 * [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) for the README template to get started here
 * [adam-p](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for the README tips and tricks
+* [Deadmau5](https://live.deadmau5.com/) for the coding focus music.
