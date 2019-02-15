@@ -8,11 +8,14 @@ function IntroBlock({}) {
       .componentStyle {
         border: 1px solid white;
         padding: 15px;
-        margin: 15px;
-        width 30%;
+        width: 30%;
         background-color: rgba(0,0,0,0.5);
         top: 50px;
         text-align: center;
+        position: absolute;
+        left: 5%;
+        top: 25%;
+        min-width: 180px;
       }
       .componentStyle:hover {
         background-color: #292929;

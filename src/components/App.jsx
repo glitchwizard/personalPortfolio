@@ -1,5 +1,6 @@
 import React from 'react';
 import Splash from './Splash';
+import Portfolio from './Portfolio';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
     `}
       </style>
       <Splash />
+      <Portfolio />
     </div>
   );
 }
