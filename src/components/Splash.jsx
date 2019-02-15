@@ -6,19 +6,22 @@ function Splash() {
     <div className="componentStyle">
       <style jsx>{`
       .componentStyle {
-        height: 90vh;
         border: 1px solid white;
         margin: 8px;
+        padding-top: 15px;
+        padding-bottom: 15px;
       }
       img {
           width: 100%;
-          margin: 0px;
+          margin-top: 0px;
+          margin-bottom: 0px;
           max-height: 500px;
           border-top: 2px white solid;
           border-bottom: 2px white solid;
           min-height: 300px;
           overflow: hidden;
           object-fit: cover;
+
       }
     `}
       </style>
