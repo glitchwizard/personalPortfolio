@@ -12,6 +12,7 @@ function IntroBlock({}) {
         width 30%;
         background-color: rgba(0,0,0,0.5);
         top: 50px;
+        text-align: center;
       }
       .componentStyle:hover {
         background-color: #292929;
@@ -21,7 +22,9 @@ function IntroBlock({}) {
             
             <h2>CHARLES MCGOWAN</h2>
             <hr/>
-            ENGINEER // WEB DEV // ARTIST
+            <p>
+              ENGINEER // WEB DEV // ARTIST
+            </p> 
         </div>
     );
 }

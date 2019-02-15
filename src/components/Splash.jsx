@@ -12,7 +12,7 @@ function Splash() {
         padding-top: 15px;
         padding-bottom: 15px;
       }
-      
+
       img {
           width: 100%;
       }
@@ -25,6 +25,7 @@ function Splash() {
         right: 0px;
         top: 0px;
       }
+      
     `}
       </style>
       <div className="headerContainer">
