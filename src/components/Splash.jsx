@@ -11,14 +11,14 @@ function Splash() {
         margin: 8px;
       }
       img {
-          z-index: -2;
+          width: 100%;
+          margin: 0px;
+          max-height: 500px;
+          border-top: 2px white solid;
+          border-bottom: 2px white solid;
+          min-height: 300px;
           overflow: hidden;
           object-fit: cover;
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
-          max-width: 100%;
-          border: 2px white solid;
       }
     `}
       </style>

@@ -9,7 +9,11 @@ function HeaderButton({buttonText}) {
         border: 1px solid white;
         padding: 15px;
         margin: 15px;
-        display: inline-block;  
+        display: inline-block; 
+      }
+
+      .componentStyle:hover {
+        background-color: #292929;
       }
     `}
       </style>
