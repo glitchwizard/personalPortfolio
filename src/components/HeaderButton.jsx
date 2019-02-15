@@ -6,9 +6,10 @@ function HeaderButton({buttonText}) {
     <div className="componentStyle">
       <style jsx>{`
       .componentStyle {
-        border: 1px solid white;
+        border: 1px solid #606060;
         padding: 15px;
         margin: 15px;
+        display: inline-block;
       }
 
       .componentStyle:hover {

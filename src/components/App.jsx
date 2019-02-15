@@ -6,8 +6,7 @@ function App() {
     <div className="mainPage">
       <style jsx>{`
         .mainPage {
-        font-family: Scto Grotesk A, sans-serif;
-        position: relative;
+        font-family: sans-serif;
         }
     `}
       </style>

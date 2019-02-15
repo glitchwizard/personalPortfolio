@@ -15,31 +15,49 @@ function Splash() {
 
       img {
           width: 100%;
+          margin-top: 0px;
+          margin-bottom: 0px;
+          max-height: 500px;
+          border-top: 2px white solid;
+          border-bottom: 2px white solid;
+          min-height: 300px;
+          overflow: hidden;
+          object-fit: cover;
       }
 
       .headerContainer {
-          position: relative;
+        min-height: 80px;
+        display: block;
       }
+
+      .headerSubChunk {
+        position: relative;
+        display: block;
+      }
+
       .headerLinkBlock {
         position: absolute;
-        right: 0px;
-        top: 0px;
+        top: 0;
+        right: 0;
       }
-      
+    
     `}
       </style>
       <div className="headerContainer">
-        <div className="headerLinkBlock">
-          <HeaderButton buttonText="PORTFOLIO" />
-          <HeaderButton buttonText="ABOUT" />
-          <HeaderButton buttonText="CONTACT" />
+        <div className="headerSubChunk">
+          <div className="headerLinkBlock">
+            <HeaderButton buttonText="PORTFOLIO"/>
+            <HeaderButton buttonText="ABOUT" />
+            <HeaderButton buttonText="CONTACT" />
+          </div>
         </div>
       </div>
-      <hr/>
-      <div className="headercontainer">
-        <img src="https://charlesvictus.files.wordpress.com/2016/12/cropped-12241623_10101849344650488_8524571144034335838_n12.jpg" />
+
+      <div>
+          <img style={{width: '100%'}} src="https://charlesvictus.files.wordpress.com/2016/12/cropped-12241623_10101849344650488_8524571144034335838_n12.jpg" />
+
         <hr/>
-        <IntroBlock className="headerLinkBlock"/>  
+        <IntroBlock/>  
       </div>
       <hr/>
     </div>
