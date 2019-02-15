@@ -12,17 +12,10 @@ function Splash() {
         padding-top: 15px;
         padding-bottom: 15px;
       }
-      {/* img {
+      
+      img {
           width: 100%;
-          margin-top: 0px;
-          margin-bottom: 0px;
-          max-height: 500px;
-          border-top: 2px white solid;
-          border-bottom: 2px white solid;
-          min-height: 300px;
-          overflow: hidden;
-          object-fit: cover;
-      } */}
+      }
 
       .headerContainer {
           position: relative;
