@@ -7,6 +7,7 @@ function App() {
       <style jsx>{`
         .mainPage {
         font-family: Scto Grotesk A, sans-serif;
+        position: relative;
         }
     `}
       </style>
