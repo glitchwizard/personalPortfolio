@@ -1,6 +1,6 @@
 import React from 'react';
 import HeaderButton from './HeaderButton';
-import IntroBlock from './Splash/IntroBlock';
+import IntroBlock from './IntroBlock';
 
 function Splash() {
   return (

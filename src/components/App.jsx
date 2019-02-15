@@ -1,6 +1,6 @@
 import React from 'react';
-import Splash from './Splash';
-import Portfolio from './Portfolio';
+import Splash from './Splash/Splash';
+import Portfolio from './Portfolio/Portfolio';
 
 function App() {
   return (
