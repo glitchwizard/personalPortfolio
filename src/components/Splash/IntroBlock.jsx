@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function IntroBlock({}) {
-    return (
-        <div className="componentStyle">
-            <style jsx>{`
+  return (
+    <div className="componentStyle">
+      <style jsx>{`
       .componentStyle {
         border: 1px solid white;
         padding: 15px;
@@ -21,19 +21,19 @@ function IntroBlock({}) {
         background-color: #292929;
       }
     `}
-            </style>
+      </style>
             
-            <h2>CHARLES MCGOWAN</h2>
-            <hr/>
-            <p>
+      <h2>CHARLES MCGOWAN</h2>
+      <hr/>
+      <p>
               ENGINEER // WEB DEV // ARTIST
-            </p> 
-        </div>
-    );
+      </p> 
+    </div>
+  );
 }
 
 IntroBlock.propTypes = {
-    buttonText: PropTypes.string.isRequired,
+  buttonText: PropTypes.string.isRequired,
 };
 
 export default IntroBlock;

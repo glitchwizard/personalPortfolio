@@ -1,17 +1,17 @@
 import React from 'react';
 
 function Seed() {
-    return (
-        <div className="componentStyle">
-            <style jsx>{`
+  return (
+    <div className="componentStyle">
+      <style jsx>{`
         .componentStyle {
             /* input CSS here*/
                 }
             `}
-            </style>
+      </style>
 
-        </div>
-    );
+    </div>
+  );
 }
 
 export default Seed;

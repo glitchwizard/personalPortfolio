@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Portfolio() {
-    return (
-        <div className="componentStyle">
-            <style jsx>{`
+  return (
+    <div className="componentStyle">
+      <style jsx>{`
                 .componentStyle {
                     border: 1px solid white;
                     margin: 8px;
@@ -34,25 +34,25 @@ function Portfolio() {
                 }
 
             `}
-            </style>
-            <div className="portfolioBlockContainer">
+      </style>
+      <div className="portfolioBlockContainer">
 
-                <div className="portfolioBlock coding">
+        <div className="portfolioBlock coding">
                 CODING
-                </div>
-                <div className="portfolioBlock art">
-                ART
-                </div>
-                <div className="portfolioBlock engineering">
-                ENGINEERING
-                </div>
-            </div>
         </div>
-    );
+        <div className="portfolioBlock art">
+                ART
+        </div>
+        <div className="portfolioBlock engineering">
+                ENGINEERING
+        </div>
+      </div>
+    </div>
+  );
 }
 
 Portfolio.propTypes = {
-    buttonText: PropTypes.string.isRequired,
+  // buttonText: PropTypes.string.isRequired,
 };
 
 export default Portfolio;

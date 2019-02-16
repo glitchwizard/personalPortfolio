@@ -1,6 +1,7 @@
 import React from 'react';
 import Splash from './Splash/Splash';
 import Portfolio from './Portfolio/Portfolio';
+import About from './About/About';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       </style>
       <Splash />
       <Portfolio />
+      <About />
     </div>
   );
 }
