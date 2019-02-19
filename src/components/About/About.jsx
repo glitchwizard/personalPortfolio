@@ -16,16 +16,13 @@ function About() {
 
                 .imgContainerWrapper {
                     position: relative;
-                    border: 5px solid blue;
                     display: block;
                     padding: 0px;
                     margin: 0px;
-                    min-height: 265px;
-                    max-height: 510px;
                 }
 
                 .imgContainer {
-                    border: 1px solid red;
+                    border: 1px solid whiteC;
                     margin: 10px;
                     padding: 0px;
                     position: absolute;

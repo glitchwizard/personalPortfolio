@@ -23,7 +23,7 @@ function IntroBlock({}) {
     `}
       </style>
             
-      <h2>CHARLES MCGOWAN</h2>
+      <h2>CHARLES McGOWAN</h2>
       <hr/>
       <p>
               ENGINEER // WEB DEV // ARTIST
