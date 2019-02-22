@@ -9,7 +9,9 @@ class Portfolio extends React.Component {
     this.state = {
       error: null,
       isGitHubUserLoaded: false,
-      gitHubUser: []
+      gitHubUser: [],
+      areGitHubReposLoaded: false,
+      gitHubRepos: []
     }
   }
 
@@ -33,20 +35,18 @@ class Portfolio extends React.Component {
         }
       )
 
-    fetch("https://api.github.com/users/glitchwizard")
+    fetch("https://api.github.com/users/glitchwizard/repos?sort=updated")
       .then(res => res.json())
       .then(
         (result) => {
           this.setState({
-            isGitHubUserLoaded: true,
-            gitHubUser: result
+            areGitHubReposLoaded: true,
+            gitHubRepos: result
           });
-          console.log('things are happening');
-          console.log(result);
         },
         (error) => {
           this.setState({
-            isGitHubUserLoaded: true,
+            areGitHubReposLoaded: true,
             error
           });
         }
