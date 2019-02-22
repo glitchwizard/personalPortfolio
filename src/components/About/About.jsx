@@ -54,13 +54,13 @@ function About() {
                 }
             `}
       </style>
-        <div className="imgContainerWrapper">   
-                <div className="imgContainer">
-                    <div className="imgWall">
-                        <img src="https://charlesvictus.files.wordpress.com/2016/12/10985961_10101827394927908_5039593149398642900_n.jpg" />
-                    </div>
-                </div>
+      <div className="imgContainerWrapper">   
+        <div className="imgContainer">
+          <div className="imgWall">
+            <img src="https://charlesvictus.files.wordpress.com/2016/12/10985961_10101827394927908_5039593149398642900_n.jpg" />
+          </div>
         </div>
+      </div>
     </div>
   );
 }
