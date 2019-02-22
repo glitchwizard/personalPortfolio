@@ -174,6 +174,13 @@ class Portfolio extends React.Component {
             <div className="portfolioBlock engineering">
               <h2>ENGINEERING</h2>
               <hr/>
+              <iframe className="portfolioYoutube"
+              width="100%"
+              height="300px" 
+              src="https://www.youtube.com/embed/8IPPW_49P44" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen></iframe>
             </div>
           </div>
         </div>
