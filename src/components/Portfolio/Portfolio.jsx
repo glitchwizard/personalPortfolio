@@ -113,8 +113,6 @@ class Portfolio extends React.Component {
                   }
 
                   .iFrameSpotify {
-                      width: 100%; 
-                      height: 180px; 
                       frameborder: 0; 
                       allowtransparency: 'true'; 
                       allow: 'encrypted-media';
@@ -186,6 +184,32 @@ class Portfolio extends React.Component {
                     height: 100%;
                     border: 1px solid white;
                   }
+
+                  .centeredItem {
+                    text-align: center;
+                    padding: 5px;
+                    display: block;
+                    margin: auto;
+                  }
+
+                  .youtubeContainer {
+                    text-align: center;
+                    max-height: 325px;
+                    max-width: 550px;
+                    width: 100%;
+                    height: 35vw;
+                    padding: 5px;
+                    margin: auto;                    
+                    min-height: 190px;
+                  }
+                  .portfolioYoutube {
+                    width: 100%;
+                    height: 100%;
+                    frameborder: 0; 
+                    allowtransparency: 'true'; 
+                    allow: 'encrypted-media';
+
+                  }
               `}
         </style>
         <div className="portfolioBlockContainerWrapper">
@@ -220,7 +244,7 @@ class Portfolio extends React.Component {
               <h3>Parade Float Design</h3>
 
                Marshmallow - Disney Frozen Parade Shanghai
-              <a>href="https://imgur.com/a/J8Ud4s5"
+              <h4>Gallery:</h4>
                 <div className="marshmallowGalleryContainer">
                   <div className="marshmallowGallery" >
                     {photos.map((photo)=> 
@@ -229,12 +253,16 @@ class Portfolio extends React.Component {
                       </div>
                       )}
                   </div>
+                    <a className="centeredItem" href="https://imgur.com/a/J8Ud4s5">See full size images here</a>
                 </div>
-              </a>
-              <iframe className="portfolioYoutube" 
-                src="https://www.youtube.com/embed/8IPPW_49P44" 
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen></iframe>
+                <h4>Video:</h4>
+              <div className="youtubeContainer">
+                <iframe className="portfolioYoutube" 
+                  src="https://www.youtube.com/embed/8IPPW_49P44" 
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+                </iframe>
+              </div>
             </div>
           </div>
         </div>
