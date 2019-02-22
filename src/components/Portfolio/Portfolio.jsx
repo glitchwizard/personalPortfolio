@@ -1,41 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Gallery from 'react-photo-gallery';
-
 
 const photos = [
   {
     src: 'https://i.imgur.com/5OzaXLU.jpg',
-    width: 5,
-    height: 4
   },
   {
     src: 'https://i.imgur.com/JfkKjhQ.jpg',
-    width: 2,
-    height: 1.5
   },
-    {
-      src: 'https://i.imgur.com/8kiIoD5.jpg',
-    width: 2,
-    height: 3
+  {
+    src: 'https://i.imgur.com/8kiIoD5.jpg',
   },
   {
     src: 'https://i.imgur.com/k50soPQ.jpg',
-  width: 4,
-  height: 3
   },
   {
     src: 'https://i.imgur.com/YQPF18K.jpg',
-    width: (5),
-    height: (3)
   },
   {
     src: 'https://i.imgur.com/CxoEzC2.jpg',
-    width: 4,
-    height: 3
   }
 ];
-
 
 class Portfolio extends React.Component {
   constructor(props){
@@ -46,13 +31,13 @@ class Portfolio extends React.Component {
       gitHubUser: [],
       areGitHubReposLoaded: false,
       gitHubRepos: []
-    }
+    };
   }
 
 
 
   componentDidMount() {
-    fetch("https://api.github.com/users/glitchwizard")
+    fetch('https://api.github.com/users/glitchwizard')
       .then(res => res.json())
       .then(
         (result) => {
@@ -69,9 +54,9 @@ class Portfolio extends React.Component {
             error
           });
         }
-      )
+      );
 
-    fetch("https://api.github.com/users/glitchwizard/repos?sort=updated")
+    fetch('https://api.github.com/users/glitchwizard/repos?sort=updated')
       .then(res => res.json())
       .then(
         (result) => {
@@ -87,7 +72,7 @@ class Portfolio extends React.Component {
             error
           });
         }
-      )
+      );
   }
 
   render(){
@@ -179,6 +164,28 @@ class Portfolio extends React.Component {
                     max-width: 66%;
                   }
 
+                  .marshmallowGalleryContainer {
+                    display: block;
+                  }
+
+                  .marshmallowGallery {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                  }
+
+                  .marshmallowGalleryPhoto{  
+                    margin: 5px;   
+                    height: 100px;
+                    
+                  }
+
+                  .marshImg {
+                    height: 100%;
+                    border: 1px solid white;
+                  }
               `}
         </style>
         <div className="portfolioBlockContainerWrapper">
@@ -189,13 +196,13 @@ class Portfolio extends React.Component {
               <hr/>
               GitHub: <a href={this.state.gitHubUser.html_url}>
                 <img className="githubAvatar" src={this.state.gitHubUser.avatar_url} alt=""/>
-              {this.state.gitHubUser.login}
+                {this.state.gitHubUser.login}
               </a>
               <h3>Most Recently Updated Repos:</h3>
-                {this.state.gitHubRepos.map((repo) => 
+              {this.state.gitHubRepos.map((repo) => 
                 <div className="repoListItem">
-                 <h5>- {repo.name}</h5><p>{repo.description}</p>
-                 </div>)}
+                  <h5>- {repo.name}</h5><p>{repo.description}</p>
+                </div>)}
 
             </div>
             <div className="portfolioBlock art">
@@ -212,14 +219,22 @@ class Portfolio extends React.Component {
               <hr/>
               <h3>Parade Float Design</h3>
 
-               Marshmallow
-               Disney Frozen Parade Shanghai
-                  <a href="https://imgur.com/a/J8Ud4s5"
-              <Gallery photos={photos} />
+               Marshmallow - Disney Frozen Parade Shanghai
+              <a>href="https://imgur.com/a/J8Ud4s5"
+                <div className="marshmallowGalleryContainer">
+                  <div className="marshmallowGallery" >
+                    {photos.map((photo)=> 
+                      <div className="marshmallowGalleryPhoto">
+                        <img className="marshImg" src={photo.src} />
+                      </div>
+                      )}
+                  </div>
+                </div>
+              </a>
               <iframe className="portfolioYoutube" 
-              src="https://www.youtube.com/embed/8IPPW_49P44" 
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen></iframe>
+                src="https://www.youtube.com/embed/8IPPW_49P44" 
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
             </div>
           </div>
         </div>
