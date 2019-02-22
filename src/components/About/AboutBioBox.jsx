@@ -25,7 +25,7 @@ function AboutBioBox() {
             `}
       </style>
       <div className="mainBioContainer">
-      <h1>ABOUT</h1>
+        <h1>ABOUT</h1>
         <hr />
         <ul>
           <li><strong>Location: </strong> Portland Oregon</li>

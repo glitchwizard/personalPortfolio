@@ -33,7 +33,13 @@ function Portfolio() {
                     display: inline-block;
                     padding: 15px;
                 }
-
+                iframe {
+                    width: 300px; 
+                    height: 180px; 
+                    frameborder: 0; 
+                    allowtransparency: 'true'; 
+                    allow: 'encrypted-media';
+                }
             `}
       </style>
       <div className="portfolioBlockContainer">
@@ -42,7 +48,11 @@ function Portfolio() {
                 CODING
         </div>
         <div className="portfolioBlock art">
-                ART
+          <h2>ART</h2>
+          <hr/>
+          <h3>Albums I've recorded on:</h3>
+          <iframe 
+            src="https://open.spotify.com/embed/album/7rYeayveuaNnZHEc0lbWGI" ></iframe>
         </div>
         <div className="portfolioBlock engineering">
                 ENGINEERING
