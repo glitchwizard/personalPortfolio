@@ -39,9 +39,10 @@ class Portfolio extends React.Component {
       .then(res => res.json())
       .then(
         (result) => {
+
           this.setState({
             areGitHubReposLoaded: true,
-            gitHubRepos: result
+            gitHubRepos: result.slice(0,6)
           });
         },
         (error) => {
@@ -74,16 +75,16 @@ class Portfolio extends React.Component {
                   .portfolioBlockContainer {
                     display: flex;
                     flex-wrap: wrap;
+                    flex-direction: row;
+                    justify-content: space-evenly;
                   }
 
                   .portfolioBlock {
-                      min-width: 300px;
-                      max-width: 425px;
-                      min-height: 325px;
-                      border: 1px solid white;
+                      border: 3px solid white;
                       margin: 15px;
-                      display: inline-block;
                       padding: 15px;
+                      flex-grow: 1;
+                      min-width: 350px
                   }
 
                   .portfolioBlock:hover {
@@ -91,7 +92,7 @@ class Portfolio extends React.Component {
                   }
 
                   .iFrameSpotify {
-                      width: 300px; 
+                      width: 100%; 
                       height: 180px; 
                       frameborder: 0; 
                       allowtransparency: 'true'; 
@@ -114,6 +115,33 @@ class Portfolio extends React.Component {
                     margin: 5px;
                   }
 
+                  p {
+                    margin: 0px;
+                    padding: 0px;
+                  }
+
+                  h5 {
+                    margin: 0px;
+                    padding: 5px;
+                    font-size: 1em;
+                  }
+
+                  .repoListItem {
+                    margin-bottom:10px;
+                  }
+
+                  .coding {
+                    max-width: 33%;
+                    
+                  }
+
+                  .art {
+                    max-width: 34%;                    
+                  }
+
+                  .engineering {
+                    max-width: 33%;
+                  }
 
               `}
         </style>
@@ -127,7 +155,12 @@ class Portfolio extends React.Component {
                 <img className="githubAvatar" src={this.state.gitHubUser.avatar_url} alt=""/>
               {this.state.gitHubUser.login}
               </a>
-                
+              <h3>Most Recently Updated Repos:</h3>
+                {this.state.gitHubRepos.map((repo) => 
+                <div className="repoListItem">
+                 <h5>- {repo.name}</h5><p>{repo.description}</p>
+                 </div>)}
+
             </div>
             <div className="portfolioBlock art">
               <h2>ART</h2>
