@@ -8,9 +8,11 @@ function App() {
     <div className="mainPage">
       <style jsx>{`
         .mainPage {
-        font-family: sans-serif;
+          font-family: "Montserrat", sans-serif;
+          
         }
-    `}
+      @import url("https://fonts.googleapis.com/css?family=Montserrat");
+      `}
       </style>
       <Splash />
       <Portfolio />
@@ -19,6 +21,5 @@ function App() {
   );
 }
 
-// note, want 'Scto Grotesk A' font eventually
 
 export default App;

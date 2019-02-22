@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Particles from 'react-particles-js';
 
 function Portfolio() {
   return (
