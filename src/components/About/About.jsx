@@ -1,4 +1,5 @@
 import React from 'react';
+import AboutBioBox from './AboutBioBox';
 
 function About() {
   return (
@@ -12,6 +13,7 @@ function About() {
                     padding-bottom: 15px;
                     display: block;
                     min-height: 600px;
+                    position: relative;
                 }
 
                 .imgContainerWrapper {
@@ -54,6 +56,7 @@ function About() {
                 }
             `}
       </style>
+      <AboutBioBox />
       <div className="imgContainerWrapper">   
         <div className="imgContainer">
           <div className="imgWall">
