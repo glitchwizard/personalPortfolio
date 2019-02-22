@@ -32,6 +32,25 @@ class Portfolio extends React.Component {
           });
         }
       )
+
+    fetch("https://api.github.com/users/glitchwizard")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            isGitHubUserLoaded: true,
+            gitHubUser: result
+          });
+          console.log('things are happening');
+          console.log(result);
+        },
+        (error) => {
+          this.setState({
+            isGitHubUserLoaded: true,
+            error
+          });
+        }
+      )
   }
 
   render(){
@@ -45,7 +64,6 @@ class Portfolio extends React.Component {
                       padding-top: 15px;
                       padding-bottom: 15px;
                       display: block;
-                      text-align: center;
                   }
 
                   .portfolioBlockContainerWrapper{
@@ -83,13 +101,20 @@ class Portfolio extends React.Component {
                   h2 {
                     padding: 0;
                     margin: 0;
+                    text-align: center;
                   }
 
                   a {
                     color: lightblue;
                   }
 
-                  
+                  .githubAvatar {
+                    width: 30px;
+                    transform: translate(0%,50%);
+                    margin: 5px;
+                  }
+
+
               `}
         </style>
         <div className="portfolioBlockContainerWrapper">
@@ -98,7 +123,10 @@ class Portfolio extends React.Component {
             <div className="portfolioBlock coding">
               <h2>CODING</h2>
               <hr/>
-              GitHub: <a href={this.state.gitHubUser.html_url}>{this.state.gitHubUser.login}</a>
+              GitHub: <a href={this.state.gitHubUser.html_url}>
+                <img className="githubAvatar" src={this.state.gitHubUser.avatar_url} alt=""/>
+              {this.state.gitHubUser.login}
+              </a>
                 
             </div>
             <div className="portfolioBlock art">
@@ -112,6 +140,7 @@ class Portfolio extends React.Component {
             </div>
             <div className="portfolioBlock engineering">
               <h2>ENGINEERING</h2>
+              <hr/>
             </div>
           </div>
         </div>
