@@ -1,6 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Gallery from 'react-photo-gallery';
 
+
+const photos = [
+  {
+    src: 'https://i.imgur.com/5OzaXLU.jpg',
+    width: 5,
+    height: 4
+  },
+  {
+    src: 'https://i.imgur.com/JfkKjhQ.jpg',
+    width: 2,
+    height: 1.5
+  },
+    {
+      src: 'https://i.imgur.com/8kiIoD5.jpg',
+    width: 2,
+    height: 3
+  },
+  {
+    src: 'https://i.imgur.com/k50soPQ.jpg',
+  width: 4,
+  height: 3
+  },
+  {
+    src: 'https://i.imgur.com/YQPF18K.jpg',
+    width: (5),
+    height: (3)
+  },
+  {
+    src: 'https://i.imgur.com/CxoEzC2.jpg',
+    width: 4,
+    height: 3
+  }
+];
 
 
 class Portfolio extends React.Component {
@@ -14,6 +48,8 @@ class Portfolio extends React.Component {
       gitHubRepos: []
     }
   }
+
+
 
   componentDidMount() {
     fetch("https://api.github.com/users/glitchwizard")
@@ -131,16 +167,16 @@ class Portfolio extends React.Component {
                   }
 
                   .coding {
-                    max-width: 33%;
+                    max-width: 40%;
                     
                   }
 
                   .art {
-                    max-width: 34%;                    
+                    max-width: 40%;                    
                   }
 
                   .engineering {
-                    max-width: 33%;
+                    max-width: 66%;
                   }
 
               `}
@@ -174,11 +210,14 @@ class Portfolio extends React.Component {
             <div className="portfolioBlock engineering">
               <h2>ENGINEERING</h2>
               <hr/>
-              <iframe className="portfolioYoutube"
-              width="100%"
-              height="300px" 
+              <h3>Parade Float Design</h3>
+
+               Marshmallow
+               Disney Frozen Parade Shanghai
+                  <a href="https://imgur.com/a/J8Ud4s5"
+              <Gallery photos={photos} />
+              <iframe className="portfolioYoutube" 
               src="https://www.youtube.com/embed/8IPPW_49P44" 
-              frameborder="0" 
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
               allowfullscreen></iframe>
             </div>
