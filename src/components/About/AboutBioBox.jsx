@@ -29,7 +29,7 @@ function AboutBioBox() {
         </ul>
         I'm happiest when I'm creating something. 
         <p>
-          Creating art, friendship, community, entertainment are my strongest desires. Leaving something better than I found it.
+          Creating art, friendship, community, and entertainment are my strongest desires. Leaving something better than I found it.
         </p> 
         <p>
           My dream is to inspire and help others be the greatest version of themselves.
