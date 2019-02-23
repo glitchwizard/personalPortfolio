@@ -41,13 +41,20 @@ Deployed via Firebase here: https://my-personal-profile-174ee.firebaseapp.com/
 
 Charley McGowan
 
+## ToDo list:
+
+* Get Anchors to work with the header bar, maybe even make the header bar a sticky one.
+* Get Engineering projects to be fed from LinkedIn API projects section of my profile (I thought that would be cool )
+* Get GitHub repo links working, it's a quick fix, just need to do it. 
+
 ## Versioning
 
 Used [Git](https://git-scm.com/) for versioning. 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Charley McGowan** - *Full Project* 
+* **Billie Thompson** - *Initial Readme setup* - [PurpleBooth](https://github.com/PurpleBooth)
 
 See also the list of [contributors](https://github.com/glitchwizard/personalPortfolio/graphs/contributors) who participated in this project.
 
