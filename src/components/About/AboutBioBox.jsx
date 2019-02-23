@@ -25,9 +25,15 @@ function AboutBioBox() {
         <h1>ABOUT</h1>
         <hr />
         <ul>
-          <li><strong>Location: </strong> Portland Oregon</li>
-
+          <li><strong>Location: </strong> Portland, Oregon</li>
         </ul>
+        I'm happiest when I'm creating something. 
+        <p>
+          Creating art, frienship, community, entertainment are my strongest desires. Leaving something better than I found it.
+        </p> 
+        <p>
+          My dream is to inspire and help others be the greatest version of themselves.
+        </p>
       </div>
     </div>
   );
