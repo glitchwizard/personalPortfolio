@@ -34,8 +34,6 @@ class Portfolio extends React.Component {
     };
   }
 
-
-
   componentDidMount() {
     fetch('https://api.github.com/users/glitchwizard')
       .then(res => res.json())
@@ -225,7 +223,7 @@ class Portfolio extends React.Component {
               <h3>Most Recently Updated Repos:</h3>
               {this.state.gitHubRepos.map((repo) => 
                 <div className="repoListItem">
-                  <h5>- {repo.name}</h5><p>{repo.description}</p>
+                  <h5>- {repo.name} [<a href={repo.html_url}>Link</a>]</h5><p>{repo.description}</p>
                 </div>)}
 
             </div>
