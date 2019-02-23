@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
     "start": "webpack-dev-server --open",
     "lint": "eslint src/** src/**/**; exit 0",
     "lint-fix": "eslint src/** src/**/** --fix; exit 0",
@@ -17,8 +18,6 @@
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-particles-js": "^2.4.2",
-    "react-photo-gallery": "^6.3.1",
     "react-router-dom": "^4.0.0",
     "styled-jsx": "^3.2.1"
   },
