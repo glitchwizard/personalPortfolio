@@ -6,11 +6,15 @@ This is the raw code for the personal portfolio of Charley McGowan
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+See it live here: https://my-personal-profile-174ee.firebaseapp.com/
+
 ###PortfolioLayout
 
 The initial portfolio layout can be found [HERE](https://drive.google.com/file/d/1nzvzyGjpuxsfWuGpcr0poom3EIbu0_3j/view?usp=sharing)
 
 ### Prerequisites
+
+View the finished product here: https://my-personal-profile-174ee.firebaseapp.com/
 
 This page will be deployed, but if you want to run it from the source, here's what you'll need:
 - [NodeJS](https://nodejs.org/en/download/) will need to be installed
@@ -24,7 +28,7 @@ That's it as far as any pre-req's to get this running.
 
 ## Deployment
 
---More info to come--
+Deployed via Firebase here: https://my-personal-profile-174ee.firebaseapp.com/
 
 ## Built With
 
