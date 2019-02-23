@@ -7,10 +7,9 @@ function AboutBioBox() {
         .componentStyle {
         border: 1px solid white;
         padding: 15px;
-        width: 46%;
+        width: calc(46% - 25px);
         background-color: rgba(0,0,0,0.5);
         top: 50px;
-        position: absolute;
         left: 5%;
         top: 25%;
         min-width: 180px;

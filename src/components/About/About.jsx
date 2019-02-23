@@ -11,23 +11,20 @@ function About() {
                     margin-top: 25px;
                     padding-top: 15px;
                     padding-bottom: 15px;
-                    display: block;
+                    display: flex;
                     min-height: 600px;
-                    position: relative;
                 }
 
                 .imgContainerWrapper {
-                    position: relative;
-                    display: block;
                     padding: 0px;
                     margin: 0px;
+                    border: 1px solid red;
                 }
 
                 .imgContainer {
-                    border: 1px solid whiteC;
+                    border: 1px solid white;
                     margin: 10px;
                     padding: 0px;
-                    position: absolute;
                     overflow: hidden;
                     width: 40%;
                     height: 50vh;
@@ -42,7 +39,6 @@ function About() {
 
                 .imgWall {
                     text-align: center; 
-                    position: absolute; 
                     top: 50%; 
                     left: 50%; 
                     transform: translate(-50%, -40%);
@@ -56,6 +52,7 @@ function About() {
                 }
             `}
       </style>
+      
       <AboutBioBox />
       <div className="imgContainerWrapper">   
         <div className="imgContainer">
