@@ -6,12 +6,10 @@ function AboutBioBox() {
       <style jsx>{`
         .componentStyle {
         border: 1px solid white;
+        margin: 25px;
         padding: 15px;
-        width: calc(46% - 25px);
+        width: calc(50%);
         background-color: rgba(0,0,0,0.5);
-        top: 50px;
-        left: 5%;
-        top: 25%;
         min-width: 180px;
         }
         
