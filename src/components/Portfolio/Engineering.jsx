@@ -1,21 +1,21 @@
 import React from 'react';
 
 function Engineering() {
-    return (
-        <div className="componentStyle">
-            <style jsx>{`
+  return (
+    <div className="componentStyle">
+      <style jsx>{`
         .componentStyle {
 
                 }
 
 
             `}
-            </style>
+      </style>
 
             
 
-        </div>
-    );
+    </div>
+  );
 }
 
 export default Engineering;
