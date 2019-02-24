@@ -208,9 +208,18 @@ class Portfolio extends React.Component {
                     allow: 'encrypted-media';
 
                   }
+
+                  h1 {
+                    text-align: center;
+                    font-size: 3.5em;
+                    padding: 1px;
+                    margin: 1px;
+                  }
               `}
         </style>
         <div className="portfolioBlockContainerWrapper">
+          <h1>PORTFOLIO</h1>
+          <hr style={{margin: '25px'}}/>
           <div className="portfolioBlockContainer">
 
             <div className="portfolioBlock coding">
@@ -242,18 +251,20 @@ class Portfolio extends React.Component {
               <h3>Parade Float Design</h3>
 
                Marshmallow - Disney Frozen Parade Shanghai
+              <p>I was responsible for all mechanical design, and manufacturing specifications for the internals of this project. I designed the float chassis, puppet skeleton, and worked with the fab team to get the articulation smooth.</p>
+              <p>I designed and created all documentation and 3D CAD work in Autodesk Inventor. The character Marshmallow was given to me by the client, and we used that as a starting point to build the rest of the cart. They wanted it 16 feet high, so after scaling it to the right size, we went to work.</p>
               <h4>Gallery:</h4>
-                <div className="marshmallowGalleryContainer">
-                  <div className="marshmallowGallery" >
-                    {photos.map((photo)=> 
-                      <div className="marshmallowGalleryPhoto">
-                        <img className="marshImg" src={photo.src} />
-                      </div>
-                      )}
-                  </div>
-                    <a className="centeredItem" href="https://imgur.com/a/J8Ud4s5">See full size images here</a>
+              <div className="marshmallowGalleryContainer">
+                <div className="marshmallowGallery" >
+                  {photos.map((photo)=> 
+                    <div className="marshmallowGalleryPhoto">
+                      <img className="marshImg" src={photo.src} />
+                    </div>
+                  )}
                 </div>
-                <h4>Video:</h4>
+                <a className="centeredItem" href="https://imgur.com/a/J8Ud4s5">See full size images here</a>
+              </div>
+              <h4>Video:</h4>
               <div className="youtubeContainer">
                 <iframe className="portfolioYoutube" 
                   src="https://www.youtube.com/embed/8IPPW_49P44" 
