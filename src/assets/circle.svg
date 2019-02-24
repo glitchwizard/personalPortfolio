@@ -1,0 +1,13 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: red;
+                stroke: black;
+                stroke-miterlimit: 10;
+            }
+        </style>
+    </defs>
+    <title>Untitled-1</title>
+    <circle class="cls-1" cx="72" cy="72" r="60.22" />
+</svg>
