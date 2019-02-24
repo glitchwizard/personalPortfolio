@@ -28,18 +28,18 @@ function App() {
       }
       `}
       </style>
-        <Particles 
-          className="particleWrapper"
-          canvasClassName="particleCanvas"
-          height="100vh" 
-          width="100vw"
-          style={{
-            zIndex: "-1",
-            position: "fixed",
-            top: '0px',
-            margin: '0',
-            padding: '0'
-          }}/> 
+      <Particles 
+        className="particleWrapper"
+        canvasClassName="particleCanvas"
+        height="100vh" 
+        width="100vw"
+        style={{
+          zIndex: '-1',
+          position: 'fixed',
+          top: '0px',
+          margin: '0',
+          padding: '0'
+        }}/> 
       <div className='pageItems'>
         <Splash />
         <Portfolio />
