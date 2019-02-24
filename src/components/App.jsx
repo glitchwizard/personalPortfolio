@@ -42,8 +42,10 @@ function App() {
         }}/> 
       <div className='pageItems'>
         <Splash />
-        <Portfolio />
-        <About />
+        <span id="Portfolio" />
+        <Portfolio id="Portfolio"/>
+        <span id="About" />
+        <About id="About"/>
       </div>
     </div>
   );
