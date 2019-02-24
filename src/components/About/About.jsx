@@ -12,7 +12,7 @@ function About() {
                     padding-top: 15px;
                     padding-bottom: 15px;
                     display: flex;
-                    min-height: 400px;
+                    min-height: 500px;
                     flex-grow: 1;
                 }
 
@@ -38,7 +38,7 @@ function About() {
 
                 img {
                   min-height: 400px;
-                  height: 35vw;
+                  object-fit: cover;
                 }
             `}
       </style>

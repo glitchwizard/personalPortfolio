@@ -10,6 +10,7 @@ function HeaderButton({buttonText}) {
         padding: 15px;
         margin: 15px;
         display: inline-block;
+        color: white;
       }
 
       .componentStyle:hover {

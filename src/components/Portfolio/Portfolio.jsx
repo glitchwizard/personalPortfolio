@@ -110,10 +110,20 @@ class Portfolio extends React.Component {
                       background-color: #292929;
                   }
 
-                  .iFrameSpotify {
+                  .iFrameDivSpotify {
+                      margin: 5px;
                       frameborder: 0; 
                       allowtransparency: 'true'; 
                       allow: 'encrypted-media';
+                      height: 200px;
+                      width: 380;
+                  }
+
+                  .iFrameDivBandcamp {
+                      border: 0; 
+                      width: 380px; 
+                      height: 200px;
+                      margin: 5px;
                   }
 
                   h2 {
@@ -234,22 +244,45 @@ class Portfolio extends React.Component {
                 <div className="repoListItem">
                   <h5>- {repo.name} [<a href={repo.html_url}>Link</a>]</h5><p>{repo.description}</p>
                 </div>)}
-
             </div>
             <div className="portfolioBlock art">
               <h2>ART</h2>
               <hr/>
               <h3>Albums I've recorded on:</h3>
-              <iframe className="iFrameSpotify"
+              <iframe className="iFrameDivSpotify"
                 src="https://open.spotify.com/embed/album/7rYeayveuaNnZHEc0lbWGI" />
-              <iframe className="iFrameSpotify"
+
+              <iframe className="iFrameDivSpotify"
                 src="https://open.spotify.com/embed/album/4Y9Dfy00JtIAvYyqto99h9" />
+
+              <iframe className="iFrameDivSpotify"
+              src="https://open.spotify.com/embed/album/61PvIFaWkCLtEpuANofDWJ" />
+
+              <iframe className="iFrameDivSpotify"
+              src="https://open.spotify.com/embed/album/3as5vNayNJ2l8CnZ5oHVEV" />
+
+              <iframe 
+                className="iFrameDivBandcamp" 
+                src="https://bandcamp.com/EmbeddedPlayer/album=3523553161/size=large/bgcol=333333/linkcol=e32c14/artwork=small/transparent=true/" seamless>
+                  <a href="http://targetfortomorrow.bandcamp.com/album/the-devastator">
+                  The Devastator by Target For Tomorrow
+                  </a>
+              </iframe>
+
+              <h3>Music I've Produced</h3>
+              <iframe 
+              width="560" 
+              height="315" 
+              src="https://www.youtube.com/embed/dIFQiKJHTDo" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen />
+
             </div>
             <div className="portfolioBlock engineering">
               <h2>ENGINEERING</h2>
               <hr/>
               <h3>Parade Float Design</h3>
-
                Marshmallow - Disney Frozen Parade Shanghai
               <p>I was responsible for all mechanical design, and manufacturing specifications for the internals of this project. I designed the float chassis, puppet skeleton, and worked with the fab team to get the articulation smooth.</p>
               <p>I designed and created all documentation and 3D CAD work in Autodesk Inventor. The character Marshmallow was given to me by the client, and we used that as a starting point to build the rest of the cart. They wanted it 16 feet high, so after scaling it to the right size, we went to work.</p>

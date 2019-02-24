@@ -56,9 +56,9 @@ function Splash() {
       <div className="headerContainer">
         <div className="headerSubChunk">
           <div className="headerLinkBlock">
-            <HeaderButton buttonText="PORTFOLIO"/>
-            <HeaderButton buttonText="ABOUT" />
-            <HeaderButton buttonText="CONTACT" />
+            <a href="#Portfolio"> <HeaderButton buttonText="PORTFOLIO"/></a>
+            <a href="#About"><HeaderButton buttonText="ABOUT" /></a>
+            <a href="#Contact"><HeaderButton buttonText="CONTACT" /></a>
           </div>
         </div>  
       </div>
