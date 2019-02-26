@@ -1,5 +1,7 @@
 import React from 'react';
 
+// TODO: complete this component and refactor Portfolio component to use this
+
 function Engineering() {
   return (
     <div className="componentStyle">
@@ -7,7 +9,6 @@ function Engineering() {
         .componentStyle {
 
                 }
-
 
             `}
       </style>

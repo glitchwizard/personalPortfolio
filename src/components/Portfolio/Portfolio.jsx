@@ -43,8 +43,6 @@ class Portfolio extends React.Component {
             isGitHubUserLoaded: true,
             gitHubUser: result
           });
-          console.log('things are happening');
-          console.log(result);
         },
         (error) => {
           this.setState({
@@ -61,7 +59,7 @@ class Portfolio extends React.Component {
 
           this.setState({
             areGitHubReposLoaded: true,
-            gitHubRepos: result.slice(0,6)
+            gitHubRepos: result.slice(0,15)
           });
         },
         (error) => {
@@ -159,7 +157,7 @@ class Portfolio extends React.Component {
 
                   .coding {
                     max-width: 40%;
-                    
+                    overflow: hidden;
                   }
 
                   .art {
@@ -269,7 +267,7 @@ class Portfolio extends React.Component {
                 </a>
               </iframe>
 
-              <h3>Music I've Produced</h3>
+              <h3>Music I've Produced:</h3>
               <iframe 
                 width="560" 
                 height="315" 
@@ -282,8 +280,8 @@ class Portfolio extends React.Component {
             <div className="portfolioBlock engineering">
               <h2>ENGINEERING</h2>
               <hr/>
-              <h3>Parade Float Design</h3>
-               Marshmallow - Disney Frozen Parade Shanghai
+              <h3>Disney Parade Float Design</h3>
+               Marshmallow Character - Disney Frozen Parade Shanghai
               <p>I was responsible for all mechanical design, and manufacturing specifications for the internals of this project. I designed the float chassis, puppet skeleton, and worked with the fab team to get the articulation smooth.</p>
               <p>I designed and created all documentation and 3D CAD work in Autodesk Inventor. The character Marshmallow was given to me by the client, and we used that as a starting point to build the rest of the cart. They wanted it 16 feet high, so after scaling it to the right size, we went to work.</p>
               <h4>Gallery:</h4>
