@@ -1,7 +1,7 @@
 {
   "name": "personal-portfolio",
   "version": "1.0.0",
-  "description": "Building a help ticket queue similar to the one at Epicodus",
+  "description": "personal Portfolio of Charley McGowan",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
