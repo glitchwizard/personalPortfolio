@@ -239,7 +239,7 @@ class Portfolio extends React.Component {
               </a>
               <h3>Most Recently Updated Repos:</h3>
               {this.state.gitHubRepos.map((repo) => 
-                <div className="repoListItem">
+                <div className="repoListItem" key={repo.name}>
                   <h5>- {repo.name} [<a href={repo.html_url}>Link</a>]</h5><p>{repo.description}</p>
                 </div>)}
             </div>
@@ -288,7 +288,7 @@ class Portfolio extends React.Component {
               <div className="marshmallowGalleryContainer">
                 <div className="marshmallowGallery" >
                   {photos.map((photo)=> 
-                    <div className="marshmallowGalleryPhoto">
+                    <div className="marshmallowGalleryPhoto" key={photo.name}>
                       <img className="marshImg" src={photo.src} />
                     </div>
                   )}

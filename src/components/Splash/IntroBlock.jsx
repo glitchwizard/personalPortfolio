@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function IntroBlock({}) {
+function IntroBlock() {
   return (
     <div className="componentStyle">
       <style jsx>{`

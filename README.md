@@ -6,7 +6,9 @@ This is the raw code for the personal portfolio of Charley McGowan
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-See it live here: https://my-personal-profile-174ee.firebaseapp.com/
+See it live here: 
+- https://my-personal-profile-174ee.firebaseapp.com/
+- www.glitchwizard.dev
 
 ###PortfolioLayout
 
