@@ -1,4 +1,6 @@
-﻿# personalPortfolio
+﻿[![Netlify Status](https://api.netlify.com/api/v1/badges/e6df8938-6e56-4198-91c8-99d725497b87/deploy-status)](https://app.netlify.com/sites/personalportfiolio/deploys)
+
+# personalPortfolio
 
 This is the raw code for the personal portfolio of Charley McGowan
 
