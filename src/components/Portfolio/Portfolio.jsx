@@ -241,6 +241,8 @@ class Portfolio extends React.Component {
                 {this.state.gitHubUser.login}
               </a>
               <h3>Most Recently Updated Repos:</h3>
+              (This list is Updated in nearly real time)
+              <p />
               {this.state.gitHubRepos.map((repo) => (
                 <div className="repoListItem" key={repo.name}>
                   <h5>

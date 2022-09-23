@@ -8,9 +8,7 @@ This is the raw code for the personal portfolio of Charley McGowan
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-See it live here: 
-- https://my-personal-profile-174ee.firebaseapp.com/
-- www.glitchwizard.dev
+See it live here: www.glitchwizard.dev
 
 ###PortfolioLayout
 
@@ -23,23 +21,26 @@ View the finished product here: https://my-personal-profile-174ee.firebaseapp.co
 This page will be deployed, but if you want to run it from the source, here's what you'll need:
 - [NodeJS](https://nodejs.org/en/download/) will need to be installed
 - Clone this project to your machine from GitHub
+- [Yarn](https://classic.yarnpkg.com/en/docs/install) is used
 That's it as far as any pre-req's to get this running.
 
 ### Installing
 
-- Open your favorite terminal and run 'npm install' from the cloned directory
-- From that same terminal run 'npm run start' 
+- Open your favorite terminal and run 'yarn install' from the cloned directory
+- From that same terminal run 'yarn start' 
 
 ## Deployment
 
-Deployed via Firebase here: https://my-personal-profile-174ee.firebaseapp.com/
+Currently Deployed via Netlify: [![Netlify Status](https://api.netlify.com/api/v1/badges/e6df8938-6e56-4198-91c8-99d725497b87/deploy-status)](https://app.netlify.com/sites/personalportfiolio/deploys)
+
 
 ## Built With
 
 * [NodeJS](https://nodejs.org/en/download/) - The web framework used
 * [npm](https://www.npmjs.com/) - Dependency Management
 * [React](https://reactjs.org/) - Used to generate HTML components
-* [Visual Studio 2017 and Visual Studio Code](https://visualstudio.microsoft.com/) - Used to generate HTML components
+* [Yarn](https://classic.yarnpkg.com/en/docs/install) 
+* [VS Code](https://code.visualstudio.com/) - Ya know.... to code this beast
 
 ## Contributing
 
@@ -49,7 +50,7 @@ Charley McGowan
 
 * Get Anchors to work with the header bar, maybe even make the header bar a sticky one.
 * Get Engineering projects to be fed from LinkedIn API projects section of my profile (I thought that would be cool )
-* Get GitHub repo links working, it's a quick fix, just need to do it. 
+* Add Contact Section with all my contact info, or maybe make a contact form and have it email me.
 
 ## Versioning
 
