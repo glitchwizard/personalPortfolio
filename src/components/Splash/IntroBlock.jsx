@@ -26,14 +26,16 @@ function IntroBlock() {
       <h2>CHARLES McGOWAN</h2>
       <hr/>
       <p>
-        ENGINEER // WEB DEV // ARTIST
+        ENGINEER // DEVELOPER // ARTIST
       </p> 
+      <br />
+      CONSULTANT // ENTERTAINER // BUILDER
     </div>
   );
 }
 
 IntroBlock.propTypes = {
-  buttonText: PropTypes.string.isRequired,
+  buttonText: PropTypes.string,
 };
 
 export default IntroBlock;
