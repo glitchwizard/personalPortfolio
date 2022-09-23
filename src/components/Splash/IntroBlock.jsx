@@ -26,7 +26,7 @@ function IntroBlock() {
       <h2>CHARLES McGOWAN</h2>
       <hr/>
       <p>
-              ENGINEER // WEB DEV // ARTIST
+        ENGINEER // WEB DEV // ARTIST
       </p> 
     </div>
   );
