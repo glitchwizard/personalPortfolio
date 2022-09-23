@@ -58,7 +58,7 @@ function Splash() {
           <div className="headerLinkBlock">
             <a href="#Portfolio"> <HeaderButton buttonText="PORTFOLIO"/></a>
             <a href="#About"><HeaderButton buttonText="ABOUT" /></a>
-            <a href="#Contact"><HeaderButton buttonText="CONTACT" /></a>
+            {/* TODO: <a href="#Contact"><HeaderButton buttonText="CONTACT" /></a> */}
           </div>
         </div>  
       </div>
