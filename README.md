@@ -51,6 +51,9 @@ Charley McGowan
 * Get Anchors to work with the header bar, maybe even make the header bar a sticky one.
 * Get Engineering projects to be fed from LinkedIn API projects section of my profile (I thought that would be cool )
 * Add Contact Section with all my contact info, or maybe make a contact form and have it email me.
+* Fix responsive issues
+ - Albums not resizing correctly when page is adjusted
+ - Header box containing my name and skills doesn't resize nicely, need to fix that too
 
 ## Versioning
 
