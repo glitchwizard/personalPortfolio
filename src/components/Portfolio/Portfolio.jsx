@@ -231,7 +231,7 @@ class Portfolio extends React.Component {
             <div className="portfolioBlock coding">
               <h2>CODING</h2>
               <hr />
-              GitHub:{" "}
+              GitHub:{' '}
               <a href={this.state.gitHubUser.html_url}>
                 <img
                   className="githubAvatar"
