@@ -16,8 +16,6 @@ The initial portfolio layout can be found [HERE](https://drive.google.com/file/d
 
 ### Prerequisites
 
-View the finished product here: https://my-personal-profile-174ee.firebaseapp.com/
-
 This page will be deployed, but if you want to run it from the source, here's what you'll need:
 - [NodeJS](https://nodejs.org/en/download/) will need to be installed
 - Clone this project to your machine from GitHub
