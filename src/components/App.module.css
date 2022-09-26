@@ -1,0 +1,16 @@
+.mainPage {
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+.pageItems {
+    position: absolute;
+    top: 0px;
+    justify-content: center;
+}
+
+.particleWrapper {}
+
+.particleCanvas {}

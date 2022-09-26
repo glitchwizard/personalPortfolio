@@ -3,34 +3,14 @@ import Splash from './Splash/Splash';
 import Portfolio from './Portfolio/Portfolio';
 import About from './About/About';
 import Particles from 'react-particles-js';
+import styles from './App.module.css';
 
 function App() {
   return (
-    <div className="mainPage">
-      <style jsx>{`
-        .mainPage {
-          font-family: "Montserrat", sans-serif;
-          position: relative;
-        }
-      @import url("https://fonts.googleapis.com/css?family=Montserrat");
-
-      .pageItems {
-        position: absolute;
-        top: 0px;
-      }
-
-      .particleWrapper {
-
-      }
-
-      .particleCanvas {
-
-      }
-      `}
-      </style>
+    <div className={styles.mainPage}>
       <Particles 
-        className="particleWrapper"
-        canvasClassName="particleCanvas"
+        className={styles.particleWrapper}
+        canvasClassName={styles.particleCanvas}
         height="100vh" 
         width="100vw"
         style={{
@@ -40,7 +20,7 @@ function App() {
           margin: '0',
           padding: '0'
         }}/> 
-      <div className='pageItems'>
+      <div className={styles.pageItems}>
         <Splash />
         <span id="Portfolio" />
         <Portfolio id="Portfolio"/>

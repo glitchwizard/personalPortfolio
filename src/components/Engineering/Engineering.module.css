@@ -1,0 +1,52 @@
+.engineering {
+    max-width: 66%;
+}
+
+.marshmallowGalleryContainer {
+    display: block;
+}
+
+.marshmallowGallery {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.marshmallowGalleryPhoto {
+    margin: 5px;
+    height: 100px;
+}
+
+.marshImg {
+    height: 100%;
+    border: 1px solid white;
+}
+
+.centeredItem {
+    text-align: center;
+    padding: 5px;
+    display: block;
+    margin: auto;
+}
+
+.youtubeContainer {
+    text-align: center;
+    max-height: 325px;
+    max-width: 550px;
+    width: 100%;
+    height: 35vw;
+    padding: 5px;
+    margin: auto;
+    min-height: 190px;
+}
+
+.portfolioYoutube {
+    width: 100%;
+    height: 100%;
+    frameborder: 0;
+    allowtransparency: "true";
+    allow: "encrypted-media";
+}

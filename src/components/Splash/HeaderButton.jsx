@@ -1,23 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './HeaderButton.module.css';
 
 function HeaderButton({buttonText}) {
   return (
-    <div className="componentStyle">
-      <style jsx>{`
-      .componentStyle {
-        border: 1px solid #606060;
-        padding: 15px;
-        margin: 15px;
-        display: inline-block;
-        color: white;
-      }
-
-      .componentStyle:hover {
-        background-color: #292929;
-      }
-    `}
-      </style>
+    <div className={styles.componentStyle}>
       {buttonText}
     </div>
   );

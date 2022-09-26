@@ -1,0 +1,17 @@
+.githubAvatar {
+    width: 30px;
+    max-height: fit-content;
+    transform: translate(0%, 50%);
+    margin: 5px;
+    object-fit: contain;
+    min-height: auto;
+}
+
+.repoListItem {
+    margin-bottom: 10px;
+}
+
+.coding {
+    max-width: 40%;
+    overflow: hidden;
+}
