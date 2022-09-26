@@ -1,0 +1,31 @@
+.portfolioBlock {
+    border: 3px solid white;
+    margin: 15px;
+    padding: 15px;
+    flex-grow: 1;
+    min-width: 350px;
+}
+
+.portfolioBlock:hover {
+    background-color: #292929;
+}
+
+.iFrameDivSpotify {
+    margin: 5px;
+    frameborder: 0;
+    allowtransparency: "true";
+    allow: "encrypted-media";
+    height: 380px;
+    width: 48%;
+}
+
+.art {
+    max-width: 40%;
+}
+
+.iFrameDivBandcamp {
+    border: 0;
+    width: 100%;
+    height: 380px;
+    margin: 5px;
+}

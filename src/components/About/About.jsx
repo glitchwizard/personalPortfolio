@@ -36,7 +36,7 @@ function About() {
                 .imgWall {
                 }
 
-                img {
+                .aboutImg {
                   min-height: 400px;
                   object-fit: cover;
                 }
@@ -46,7 +46,7 @@ function About() {
       <AboutBioBox />
       <div className="imgContainerWrapper">   
         <div className="imgContainer">
-          <img src="https://charlesvictus.files.wordpress.com/2016/12/10985961_10101827394927908_5039593149398642900_n.jpg" />
+          <img className="aboutImg" src="https://charlesvictus.files.wordpress.com/2016/12/10985961_10101827394927908_5039593149398642900_n.jpg" />
         </div>
       </div>
     </div>

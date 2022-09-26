@@ -1,0 +1,61 @@
+.Portfolio {
+    border: 1px solid white;
+    margin: 8px;
+    margin-top: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: block;
+}
+
+.portfolioBlockContainerWrapper {
+    margin: auto;
+    display: inline-block;
+}
+
+.portfolioBlockContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.portfolioBlock {
+    border: 3px solid white;
+    margin: 15px;
+    padding: 15px;
+    flex-grow: 1;
+    min-width: 350px;
+}
+
+.portfolioBlock:hover {
+    background-color: #292929;
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+a {
+    color: lightblue;
+}
+
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+h5 {
+    margin: 0px;
+    padding: 5px;
+    font-size: 1em;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.5em;
+    padding: 1px;
+    margin: 1px;
+}
