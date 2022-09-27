@@ -9,26 +9,28 @@ const Art = ({cssClass}) => (
     <hr />
 
     <h3>Albums I've recorded on:</h3>
+    <div className={styles.spotifyFlex}>
+      <iframe
+        className={styles.iFrameDivSpotify}
+        src="https://open.spotify.com/embed/album/7rYeayveuaNnZHEc0lbWGI"
+      />
 
-    <iframe
-      className={styles.iFrameDivSpotify}
-      src="https://open.spotify.com/embed/album/7rYeayveuaNnZHEc0lbWGI"
-    />
+      <iframe
+        className={styles.iFrameDivSpotify}
+        src="https://open.spotify.com/embed/album/4Y9Dfy00JtIAvYyqto99h9"
+      />
 
-    <iframe
-      className={styles.iFrameDivSpotify}
-      src="https://open.spotify.com/embed/album/4Y9Dfy00JtIAvYyqto99h9"
-    />
+      <iframe
+        className={styles.iFrameDivSpotify}
+        src="https://open.spotify.com/embed/album/61PvIFaWkCLtEpuANofDWJ"
+      />
 
-    <iframe
-      className={styles.iFrameDivSpotify}
-      src="https://open.spotify.com/embed/album/61PvIFaWkCLtEpuANofDWJ"
-    />
+      <iframe
+        className={styles.iFrameDivSpotify}
+        src="https://open.spotify.com/embed/album/3as5vNayNJ2l8CnZ5oHVEV"
+      />
+    </div>
 
-    <iframe
-      className={styles.iFrameDivSpotify}
-      src="https://open.spotify.com/embed/album/3as5vNayNJ2l8CnZ5oHVEV"
-    />
 
     <iframe
       className={styles.iFrameDivBandcamp}

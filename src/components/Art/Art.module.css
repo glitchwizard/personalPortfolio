@@ -16,7 +16,7 @@
     allowtransparency: "true";
     allow: "encrypted-media";
     height: 380px;
-    width: 48%;
+    flex-grow: 1;
 }
 
 .art {
@@ -28,4 +28,10 @@
     width: 100%;
     height: 380px;
     margin: 5px;
+}
+
+.spotifyFlex {
+    display: flex;
+    flex-wrap: wrap;
+    
 }
