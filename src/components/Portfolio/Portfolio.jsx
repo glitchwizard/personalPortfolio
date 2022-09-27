@@ -42,7 +42,7 @@ class Portfolio extends React.Component {
 
           this.setState({
             areGitHubReposLoaded: true,
-            gitHubRepos: result.slice(0,30)
+            gitHubRepos: result.slice(0,20)
           });
         },
         (error) => {

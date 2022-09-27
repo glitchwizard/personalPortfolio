@@ -31,23 +31,24 @@ const Art = ({cssClass}) => (
       />
     </div>
 
-
-    <iframe
-      className={styles.iFrameDivBandcamp}
-      src="https://bandcamp.com/EmbeddedPlayer/album=3523553161/size=large/bgcol=333333/linkcol=e32c14/artwork=small/transparent=true/"
-      seamless
-    >
-      <a href="http://targetfortomorrow.bandcamp.com/album/the-devastator">
-        The Devastator by Target For Tomorrow
-      </a>
-    </iframe>
+    <div className={styles.bandcampContainer}>
+      <iframe
+        className={styles.iFrameDivBandcamp}
+        src="https://bandcamp.com/EmbeddedPlayer/album=3523553161/size=large/bgcol=333333/linkcol=e32c14/artwork=small/transparent=true/"
+        seamless
+      >
+        <a href="http://targetfortomorrow.bandcamp.com/album/the-devastator">
+          The Devastator by Target For Tomorrow
+        </a>
+      </iframe>
+    </div>
 
     <h3>Music I've Produced:</h3>
 
     <h2>Justin Gibson - The Long Goodbye</h2>
 
     <iframe
-      width="100%"
+      width="auto"
       height="315"
       src="https://www.youtube.com/embed/dIFQiKJHTDo"
       frameborder="0"

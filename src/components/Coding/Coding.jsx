@@ -4,7 +4,7 @@ import styles from './Coding.module.css';
 
 const Coding = ({cssClass, gitHubRepos, gitHubUser}) => {
   
-  return(
+  return (
     <div className={`${cssClass} ${styles.coding}`}>
       <h2> CODING </h2> <hr />
       GitHub:
@@ -18,14 +18,20 @@ const Coding = ({cssClass, gitHubRepos, gitHubUser}) => {
       </a>
       <h3> Most Recently Updated Repos: </h3>
       (This list is Updated in nearly real time) <p />
-      {gitHubRepos.map((repo) => (
-        <div className={styles.repoListItem} key={repo.name}>
-          <h5>
-            -{repo.name} [ <a href={repo.html_url}> Link </a>]
-          </h5>
-          <p> {repo.description} </p>
-        </div>
-      ))}
+      <div className={styles.repoList}>
+        {gitHubRepos.map((repo, index) => (
+          <div className={styles.repoListItem} key={repo.name}>
+            <h3>{index + 1}</h3>
+            <hr />
+            <div className={styles.repoInnerCard}>
+              <a href={repo.html_url} className={styles.repoName}>
+                <h4>{repo.name}</h4>
+              </a>
+              <p className={styles.repodDesc}> {repo.description} </p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -7,11 +7,38 @@
     min-height: auto;
 }
 
+.repoList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    flex-direction: row;
+    align-content: stretch;
+    row-gap: 25px;
+}
+
 .repoListItem {
     margin-bottom: 10px;
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 6px;  
+    margin: 5px;
+    width: 25vh;
+    flex-grow: 1;
+    overflow: hidden;
 }
 
 .coding {
-    max-width: 40%;
     overflow: hidden;
+}
+
+.repoName {
+    font-weight: bold;
+}
+
+.repoDesc {
+    font-weight: lighter;
+}
+
+.repoInnerCard {
+    padding: 6px; 
 }

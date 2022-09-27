@@ -4,29 +4,24 @@
     margin-top: 25px;
     padding-top: 15px;
     padding-bottom: 15px;
-    display: block;
-    min-width: 80%;
-    max-width: 100%;
+    width: 95%;
 }
 
 .portfolioBlockContainerWrapper {
-    margin: auto;
-    display: inline-block;
 }
 
 .portfolioBlockContainer {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .portfolioBlock {
     border: 3px solid white;
     margin: 15px;
     padding: 15px;
+    width: 75vh;
     flex-grow: 1;
-    min-width: 350px;
 }
 
 .portfolioBlock:hover {
