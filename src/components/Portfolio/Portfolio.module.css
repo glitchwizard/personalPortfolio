@@ -16,12 +16,19 @@
     justify-content: space-around;
 }
 
-.portfolioBlock {
+.portfolioOuterBlock {
     border: 3px solid white;
     margin: 15px;
     padding: 15px;
-    width: 75vh;
     flex-grow: 1;
+}
+
+.portfolioInnerBlock {
+    border: 3px solid white;
+    margin: 15px;
+    padding: 15px;
+    width: 50vh;
+    flex-grow: 2;
 }
 
 .portfolioBlock:hover {

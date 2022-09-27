@@ -60,10 +60,17 @@ class Portfolio extends React.Component {
         <div className={styles.portfolioBlockContainerWrapper}>
           <h1>PORTFOLIO</h1>
           <hr style={{ margin: '25px' }} />
+          
           <div className={styles.portfolioBlockContainer}>
-            <Coding cssClass={styles.portfolioBlock} gitHubUser={this.state.gitHubUser} gitHubRepos={this.state.gitHubRepos} />
-            <Art cssClass={styles.portfolioBlock} />
-            <Engineering cssClass={styles.portfolioBlock} />
+            <div className={styles.portfolioBlockContainer}>
+              <Coding
+                cssClass={styles.portfolioInnerBlock}
+                gitHubUser={this.state.gitHubUser}
+                gitHubRepos={this.state.gitHubRepos}
+              />
+              <Art cssClass={styles.portfolioInnerBlock} />
+              <Engineering cssClass={styles.portfolioOuterBlock} />
+            </div>
           </div>
         </div>
       </div>
