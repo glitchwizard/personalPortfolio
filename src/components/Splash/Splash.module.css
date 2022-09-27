@@ -37,8 +37,3 @@
 .imgBlock {
     position: relative;
 }
-
-img {
-    object-fit: cover;
-    max-height: 440px;
-}

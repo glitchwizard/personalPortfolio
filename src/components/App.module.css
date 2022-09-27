@@ -1,14 +1,15 @@
 .mainPage {
     font-family: "Montserrat", sans-serif;
-    position: relative;
+    justify-content: center;
 }
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
 .pageItems {
-    position: absolute;
-    top: 0px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .particleWrapper {}

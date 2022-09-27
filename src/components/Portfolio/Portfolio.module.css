@@ -5,6 +5,8 @@
     padding-top: 15px;
     padding-bottom: 15px;
     display: block;
+    min-width: 80%;
+    max-width: 100%;
 }
 
 .portfolioBlockContainerWrapper {
