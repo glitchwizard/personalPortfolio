@@ -48,7 +48,7 @@ const Art = ({cssClass}) => (
     <h2>Justin Gibson - The Long Goodbye</h2>
 
     <iframe
-      width="auto"
+      width="100%"
       height="315"
       src="https://www.youtube.com/embed/dIFQiKJHTDo"
       frameborder="0"
