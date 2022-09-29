@@ -13,7 +13,7 @@
     justify-content:space-around;
     flex-direction: row;
     align-content: stretch;
-    row-gap: 25px;
+    row-gap: 2vh;
 }
 
 .repoListItem {
@@ -22,7 +22,7 @@
     border: 2px solid rgba(255, 255, 255, 0.158);
     border-radius: 6px;  
     margin: 5px;
-    width: 20vh;
+    width: 23vh;
     flex-grow: 1;
     overflow: hidden;
 }
