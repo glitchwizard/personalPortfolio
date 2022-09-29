@@ -46,12 +46,24 @@ Charley McGowan
 
 ## ToDo list:
 
-* Get Anchors to work with the header bar, maybe even make the header bar a sticky one.
 * Get Engineering projects to be fed from LinkedIn API projects section of my profile (I thought that would be cool )
 * Add Contact Section with all my contact info, or maybe make a contact form and have it email me.
-* Fix responsive issues
- - Albums not resizing correctly when page is adjusted
- - Header box containing my name and skills doesn't resize nicely, need to fix that too
+* SVG Map my face for the particles to make my face a shape.
+* Get the pics in engineering to pop up in a cool modal way 
+
+-- Kenny Westfall suggestions --
+* Personally I feel the sections don't need their white outlines. They add too much visual complexity, detracting from the cool animated background. I would also recommend adding a subtly transparent dark background to the content sections to make the words a little more readable above the moving lines, improving user experience for people with trouble reading light text on dark backgrounds.
+* Also consider making your content sections have a consistent width. Unless you intended a funnel appearance, scrolling down from the wide music section to the narrow engineering, then even narrower about seems jarring.
+* Your motivations behind the projects provide great insight into your work and personality as well. I would encourage you to write more about each project in an expandable info section so people who are interested can read more about what you've done. For example, hearing that you have enjoyed coding your current site from scratch and learning as you go is a great signal to hiring managers that you are hungry to learn and grow, and not stuck in your ways.
+* Frankly, the outlines give the site a MySpace feel, so if that was your intention then feel free to keep it. In my experience with web design I have found that less visual emphasis on the structure allows the content to shine more.
+* Another suggestion, for the coding section, is to move the linked project titles up next to the number to make the cards more readable and to look cleaner.
+** Make the title text white but keep it a link. Make the whole card a link, if possible.
+** I still think the cards could use a little tweaking so they stand out from the background. Right now I feel like the animated lines clash with the white text.
+* If you want to get real fancy, you could make the images set as backgrounds for the same size thumbnails for some consistency, then clicking it launches the full image view.
+knetwalker's profile picture
+* If you want to get real fancy, if you think you would add other projects that would require this function later, you could code a gallery that would automatically set the width of the images based on the number of images you are using.
+
+
 
 ## Versioning
 
@@ -75,3 +87,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) for the README template to get started here
 * [adam-p](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for the README tips and tricks
 * [Deadmau5](https://live.deadmau5.com/) for the coding focus music.
+* Kenny Westfall, for giving killer feedback on the look and feel of the site

@@ -27,6 +27,15 @@
     overflow: hidden;
 }
 
+.repoListItem:hover {
+    background-color: rgba(150, 150, 150, 0.158);
+
+}
+
+.noWrap {
+    white-space: nowrap;
+}
+
 .coding {
     overflow: hidden;
 }
@@ -36,9 +45,13 @@
 }
 
 .repoDesc {
-    font-weight: lighter;
+
 }
 
-.repoInnerCard {
-    padding: 6px; 
+.repoInnerCard, .repoInnerCard:link{
+    padding: 6px;
+    font-weight: lighter;
+    font-style: normal;
+    text-decoration: none;
+    color: white; 
 }

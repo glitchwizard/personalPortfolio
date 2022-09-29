@@ -20,16 +20,15 @@ const Coding = ({cssClass, gitHubRepos, gitHubUser}) => {
       (This list is Updated in nearly real time) <p />
       <div className={styles.repoList}>
         {gitHubRepos.map((repo, index) => (
-          <div className={styles.repoListItem} key={repo.name}>
-            <h3>{index + 1}</h3>
-            <hr />
-            <div className={styles.repoInnerCard}>
-              <a href={repo.html_url} className={styles.repoName}>
-                <h4>{repo.name}</h4>
-              </a>
-              <p className={styles.repodDesc}> {repo.description} </p>
+          <a href={repo.html_url} className={styles.repoName} key={repo.name}>
+            <div className={styles.repoListItem}>
+              <h3 className={styles.noWrap}>{index + 1} - {repo.name}</h3>
+              <hr />
+              <div className={styles.repoInnerCard}>
+                <p className={styles.repodDesc}> {repo.description} </p>
+              </div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </div>
