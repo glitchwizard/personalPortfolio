@@ -1,5 +1,4 @@
 .Portfolio {
-    border: 1px solid white;
     margin: 8px;
     margin-top: 25px;
     padding-top: 15px;
@@ -17,22 +16,31 @@
 }
 
 .portfolioOuterBlock {
-    border: 3px solid white;
     margin: 15px;
     padding: 15px;
     flex-grow: 1;
+    border-radius: 3px;
 }
 
 .portfolioInnerBlock {
-    border: 3px solid white;
     margin: 15px;
     padding: 15px;
     width: 38vh;
     flex-grow: 2;
+    border-radius: 3px;
+}
+
+.portfolioInnerBlock:hover {
+    background-color: rgba(255, 255, 255, 0.158);;
+}
+
+.portfolioOuterBlock:hover {
+    background-color: rgba(255, 255, 255, 0.158);;
+
 }
 
 .portfolioBlock:hover {
-    background-color: #292929;
+    background-color: rgba(255, 255, 255, 0.158);;
 }
 
 h2 {

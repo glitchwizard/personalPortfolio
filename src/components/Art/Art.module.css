@@ -12,11 +12,11 @@
     allow: "encrypted-media";
 }
 
-.art {
+.art:hover {
 }
 
 .iFrameDivBandcamp {
-    border: 2px solid white;
+    border: 2px solid rgba(255, 255, 255, 0.158);
     height: 540px;
     width: 50vh;
     margin: 5px;

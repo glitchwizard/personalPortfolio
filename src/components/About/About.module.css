@@ -1,5 +1,4 @@
 .componentStyle {
-    border: 1px solid white;
     margin: 8px;
     margin-top: 25px;
     padding-top: 15px;
@@ -7,6 +6,11 @@
     display: flex;
     min-height: 500px;
     width: 66%;
+    border-radius: 3px;
+}
+
+.componentStyle:hover {
+    background-color: rgba(255, 255, 255, 0.158);
 }
 
 .imgContainerWrapper {
