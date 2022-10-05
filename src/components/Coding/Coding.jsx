@@ -6,8 +6,8 @@ const Coding = ({cssClass, gitHubRepos, gitHubUser}) => {
   return (
     <div className={`${cssClass} ${styles.coding}`}>
       <h2> CODING </h2> <hr />
-      Stack Exchange:
-      <p />
+      {/* TODO: Stack Exchange:
+      <p /> */}
       GitHub:
       <a href={gitHubUser.html_url}>
         <img
