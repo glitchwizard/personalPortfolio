@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import styles from './Coding.module.css';
 
 const Coding = ({cssClass, gitHubRepos, gitHubUser}) => {
-  
   return (
     <div className={`${cssClass} ${styles.coding}`}>
       <h2> CODING </h2> <hr />
+      Stack Exchange:
+      <p />
       GitHub:
       <a href={gitHubUser.html_url}>
         <img
@@ -16,6 +17,7 @@ const Coding = ({cssClass, gitHubRepos, gitHubUser}) => {
         />
         {gitHubUser.login}
       </a>
+
       <h3> Most Recently Updated Repos: </h3>
       (This list is Updated in nearly real time) <p />
       <div className={styles.repoList}>
