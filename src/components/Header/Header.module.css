@@ -1,0 +1,15 @@
+.headerContainer {
+    min-height: 80px;
+    display: block;
+}
+
+.headerSubChunk {
+    position: relative;
+    display: block;
+}
+
+.headerLinkBlock {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

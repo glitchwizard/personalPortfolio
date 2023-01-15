@@ -19,6 +19,7 @@
     overflow: hidden;
     border: 1px solid white;
     margin: 10px;
+    border-radius: 5px;
 }
 
 .imgContainer {
@@ -27,7 +28,6 @@
     position: absolute;
     overflow: hidden;
     transform: translate(-50%, 0%);
-
 }
 
 .imgWall {}

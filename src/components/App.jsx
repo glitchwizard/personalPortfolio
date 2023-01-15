@@ -9,7 +9,9 @@ import {particleSettings} from './particlesSettings';
 
 const App = () => {
 
-  const [particlesLoad, setParticlesLoad] = useState(false);
+  const [areParticlesLoaded, setAreParticlesLoaded] = useState(false);
+
+  let engine_load;
 
   const particlesInit = useCallback(async (engine) => {
     // console.log(engine);
@@ -17,21 +19,26 @@ const App = () => {
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
     // starting from v2 you can add only the features you need reducing the bundle size
     await loadFull(engine);
-    if (engine){
-      setParticlesLoad(true);
+    while (engine){
+      engine_load = engine;
+      setAreParticlesLoaded(true);
     }
   }, []);
 
   const particlesLoaded = useCallback(async () => {
     // await console.log(container);
-    await setParticlesLoad(true);
+    await setAreParticlesLoaded(true);
   }, []);
 
-  useEffect;
+  useEffect(() => {
+    if (engine_load) {
+      setAreParticlesLoaded(true);
+    } 
+  });
 
   return (
     <div className={styles.mainPage}>
-      {particlesLoad ?
+      {areParticlesLoaded ?
         <Particles
           className={styles.particleWrapper}
           canvasClassName={styles.particleCanvas}
