@@ -8,6 +8,7 @@
      left: 5%;
      top: 25%;
      min-width: 180px;
+     border-radius: 3px;
  }
 
  .componentStyle:hover {

@@ -36,6 +36,7 @@ const Art = ({cssClass}) => (
         className={styles.iFrameDivBandcamp}
         src="https://bandcamp.com/EmbeddedPlayer/album=3523553161/size=large/bgcol=333333/linkcol=e32c14/artwork=small/transparent=true/"
         seamless
+        frameborder="0"
       >
         <a href="http://targetfortomorrow.bandcamp.com/album/the-devastator">
           The Devastator by Target For Tomorrow
@@ -67,6 +68,7 @@ const Art = ({cssClass}) => (
         src="https://open.spotify.com/embed/artist/7DUfcJTCKJEz9Eh5yFevo9"
         width={'100%'}
         height="380"
+        frameborder="0"
       ></iframe>
     </div>
   </div>
