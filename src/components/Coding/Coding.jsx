@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Coding.module.css';
@@ -31,19 +32,23 @@ const Coding = (
       {areGitHubReposLoaded ?
         <div>
           <h3> Most Recently Updated Repos: </h3>
-          (This list is Updated in nearly real time) <p />
+          <p />
           <div className={styles.repoList}>
-            {gitHubRepos.map((repo, index) => (
-              <a href={repo.html_url} className={styles.repoName} key={repo.name}>
-                <div className={styles.repoListItem}>
-                  <h3 className={styles.noWrap}>{index + 1} - {repo.name}</h3>
-                  <hr />
-                  <div className={styles.repoInnerCard}>
-                    <p className={styles.repodDesc}> {repo.description} </p>
+            { (gitHubRepos[0]) ? 
+              gitHubRepos.map((repo, index) => (
+                <a href={repo.html_url} className={styles.repoName} key={repo.name}>
+                  <div className={styles.repoListItem}>
+                    <h3 className={styles.noWrap}>{index + 1} - {repo.name}</h3>
+                    <hr />
+                    <div className={styles.repoInnerCard}>
+                      <p className={styles.repodDesc}> {repo.description} </p>
+                    </div>
                   </div>
-                </div>
-              </a>
-            ))}
+                </a>
+              )) : <div>Error loding repos
+                <p/>{console.log(gitHubRepos)}
+              </div>
+            }
           </div>
         </div>
         : <Skeleton animation="wave"/>     
@@ -54,7 +59,7 @@ const Coding = (
 
 Coding.propTypes = {
   cssClass: PropTypes.any,
-  gitHubRepos: PropTypes.any,
+  gitHubRepos: PropTypes.array,
   gitHubUser: PropTypes.any,
   areGitHubReposLoaded: PropTypes.bool,
   isGitHubUserLoaded: PropTypes.bool
