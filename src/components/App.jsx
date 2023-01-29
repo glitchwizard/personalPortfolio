@@ -5,13 +5,15 @@ import About from './About/About';
 import styles from './App.module.css';
 import Particles from 'react-particles';
 import { loadFull } from 'tsparticles';
-import {particleSettings} from './particlesSettings';
+import { particleSettings } from './particlesSettings';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import theme_settings from './theme';
+
+const theme = createTheme(theme_settings);
 
 const App = () => {
 
   const [areParticlesLoaded, setAreParticlesLoaded] = useState(false);
-
-  let engine_load;
 
   const particlesInit = useCallback(async (engine) => {
     // console.log(engine);
@@ -19,45 +21,39 @@ const App = () => {
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
     // starting from v2 you can add only the features you need reducing the bundle size
     await loadFull(engine);
-    while (engine){
-      engine_load = engine;
-      setAreParticlesLoaded(true);
-    }
   }, []);
 
   const particlesLoaded = useCallback(async () => {
     // await console.log(container);
-    await setAreParticlesLoaded(true);
   }, []);
 
   useEffect(() => {
-    if (engine_load) {
-      setAreParticlesLoaded(true);
-    } 
+    setAreParticlesLoaded(true);
   });
 
   return (
-    <div className={styles.mainPage}>
-      {areParticlesLoaded ?
-        <Particles
-          className={styles.particleWrapper}
-          canvasClassName={styles.particleCanvas}
-          id="tsparticles"
-          init={particlesInit}
-          loaded={particlesLoaded}
-          options={ particleSettings }
-        /> :
-        <span/>
-      }
-      
-      <div className={styles.pageItems}>
-        <Splash />
-        <span id="Portfolio" />
-        <Portfolio id="Portfolio" />
-        <span id="About" />
-        <About id="About" />
+    <ThemeProvider theme={theme}>
+      <div className={styles.mainPage}>
+        { areParticlesLoaded ?
+          <Particles
+            className={styles.particleWrapper}
+            canvasClassName={styles.particleCanvas}
+            id="tsparticles"
+            init={particlesInit}
+            loaded={particlesLoaded}
+            options={ particleSettings }
+          /> :
+          <span />
+        }
+        <div className={styles.pageItems}>
+          <Splash />
+          <span id="Portfolio" />
+          <Portfolio id="Portfolio" />
+          <span id="About" />
+          <About id="About" />
+        </div>
       </div>
-    </div>
+    </ThemeProvider>
   );
 };
 

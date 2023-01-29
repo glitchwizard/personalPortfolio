@@ -11,6 +11,7 @@ const Art = ({cssClass}) => (
     <h3>Albums I've recorded on:</h3>
     <div className={styles.spotifyFlex}>
       <iframe
+        loading='lazy'
         className={styles.iFrameDivSpotify}
         src="https://open.spotify.com/embed/album/7rYeayveuaNnZHEc0lbWGI"
       />
@@ -36,7 +37,7 @@ const Art = ({cssClass}) => (
         className={styles.iFrameDivBandcamp}
         src="https://bandcamp.com/EmbeddedPlayer/album=3523553161/size=large/bgcol=333333/linkcol=e32c14/artwork=small/transparent=true/"
         seamless
-        frameborder="0"
+        frameBorder="0"
       >
         <a href="http://targetfortomorrow.bandcamp.com/album/the-devastator">
           The Devastator by Target For Tomorrow
@@ -52,9 +53,9 @@ const Art = ({cssClass}) => (
       width="100%"
       height="315"
       src="https://www.youtube.com/embed/dIFQiKJHTDo"
-      frameborder="0"
+      frameBorder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
+      allowFullScreen
     />
 
     <h3>Artists I've Managed:</h3>
@@ -68,14 +69,14 @@ const Art = ({cssClass}) => (
         src="https://open.spotify.com/embed/artist/7DUfcJTCKJEz9Eh5yFevo9"
         width={'100%'}
         height="380"
-        frameborder="0"
+        frameBorder="0"
       ></iframe>
     </div>
   </div>
 );
 
 Art.propTypes = {
-  cssClass: PropTypes.object
+  cssClass: PropTypes.string
 };
 
 Art.defaultProps = {};

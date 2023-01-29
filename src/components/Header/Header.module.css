@@ -13,3 +13,17 @@
     top: 0;
     right: 0;
 }
+
+.headerButtonStyle {
+    border: 1px solid #606060;
+    padding: 15px;
+    margin: 15px;
+    display: inline-block;
+    color: white;
+    border-radius: 3px;
+    font: inherit;
+}
+
+.headerButtonStyle:hover {
+    background-color: #292929;
+}

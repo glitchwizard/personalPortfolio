@@ -1,6 +1,6 @@
+import {Button} from '@mui/material';
 import React from 'react';
 import styles from './Header.module.css';
-import HeaderButton from './HeaderButton';
 
 let Header = () => {
 
@@ -8,9 +8,9 @@ let Header = () => {
     <div className={styles.headerContainer}>
       <div className={styles.headerSubChunk}>
         <div className={styles.headerLinkBlock}>
-          <a href="#Portfolio"> <HeaderButton buttonText="PORTFOLIO"/></a>
-          <a href="#About"><HeaderButton buttonText="ABOUT" /></a>
-          {/* TODO: <a href="#Contact"><HeaderButton buttonText="CONTACT" /></a> */}
+          <Button href="#Portfolio" variant="outlined" size="large">PORTFOLIO</Button>
+          <Button href="#About" variant="outlined" size="large">ABOUT</Button>
+          {/* TODO: <a href="#Contact"><Button /></a> */}
         </div>
       </div>  
     </div>
