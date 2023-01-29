@@ -31,7 +31,7 @@ const Portfolio = () => {
         setgitHubRepos(repoListFetchResult);
         setareGitHubReposLoaded(true);
       });
-  }, [isGitHubUserLoaded, gitHubRepos, gitHubUser, areGitHubReposLoaded]);
+  }, [isGitHubUserLoaded, areGitHubReposLoaded]);
   
   return (
     <div className={styles.Portfolio}>
