@@ -45,7 +45,7 @@ const Coding = (
                     </div>
                   </div>
                 </a>
-              )) : <div>Error loding repos
+              )) : <div>Error loading repos
                 <p/>{console.log(gitHubRepos)}
               </div>
             }
