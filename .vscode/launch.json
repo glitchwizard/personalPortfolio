@@ -1,10 +1,22 @@
 {
     "configurations": [
         {
-            "type": "chrome",
-            "name": "https://localhost:3000",
+            "type": "firefox",
             "request": "launch",
-            "url": "https://localhost:3000"
+            "reAttach": true,
+            "name": "Launch localhost",
+            "url": "http://172.17.158.215:3000",
+            "pathMappings": [
+                {
+                    "url": "http://172.17.158.215:3000/home/glitchwizard/repos/personalPortfolio/src",
+                    "path": "${workspaceFolder}/src"
+                },
+                {
+                    "url": "http://172.17.8.65:3000/home/glitchwizard/repos/personalPortfolio",
+                    "path": "${workspaceFolder}"
+                }
+            ],
+            
         }
     ]
 }

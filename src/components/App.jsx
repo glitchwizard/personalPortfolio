@@ -5,12 +5,15 @@ import About from './About/About';
 import styles from './App.module.css';
 import Particles from 'react-particles';
 import { loadFull } from 'tsparticles';
-import {particleSettings} from './particlesSettings';
+import { particleSettings } from './particlesSettings';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import theme_settings from './theme';
+
+const theme = createTheme(theme_settings);
 
 const App = () => {
 
   const [areParticlesLoaded, setAreParticlesLoaded] = useState(false);
-
 
   const particlesInit = useCallback(async (engine) => {
     // console.log(engine);
@@ -29,29 +32,28 @@ const App = () => {
   });
 
   return (
-
-    <div className={styles.mainPage}>
-      { areParticlesLoaded ?
-        <Particles
-          className={styles.particleWrapper}
-          canvasClassName={styles.particleCanvas}
-          id="tsparticles"
-          init={particlesInit}
-          loaded={particlesLoaded}
-          options={ particleSettings }
-        /> :
-        <span />
-      }
-      
-      <div className={styles.pageItems}>
-        
-        <Splash />
-        <span id="Portfolio" />
-        <Portfolio id="Portfolio" />
-        <span id="About" />
-        <About id="About" />
+    <ThemeProvider theme={theme}>
+      <div className={styles.mainPage}>
+        { areParticlesLoaded ?
+          <Particles
+            className={styles.particleWrapper}
+            canvasClassName={styles.particleCanvas}
+            id="tsparticles"
+            init={particlesInit}
+            loaded={particlesLoaded}
+            options={ particleSettings }
+          /> :
+          <span />
+        }
+        <div className={styles.pageItems}>
+          <Splash />
+          <span id="Portfolio" />
+          <Portfolio id="Portfolio" />
+          <span id="About" />
+          <About id="About" />
+        </div>
       </div>
-    </div>
+    </ThemeProvider>
   );
 };
 

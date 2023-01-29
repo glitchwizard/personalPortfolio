@@ -1,10 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './IntroBlock.module.css';
+import { Paper } from '@mui/material';
 
 function IntroBlock() {
   return (
-    <div className={styles.componentStyle}>  
+    <Paper className={styles.componentStyle}>
       <h2>CHARLES McGOWAN</h2>
       <hr/>
       <p>
@@ -12,12 +12,8 @@ function IntroBlock() {
       </p> 
       <br />
       CONSULTANT // ENTERTAINER // BUILDER
-    </div>
+    </Paper>
   );
 }
-
-IntroBlock.propTypes = {
-  buttonText: PropTypes.string,
-};
 
 export default IntroBlock;

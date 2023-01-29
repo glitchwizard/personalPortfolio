@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Coding.module.css';
 import {GitHub} from '@mui/icons-material';
+import { Skeleton } from '@mui/material';
 
 const Coding = (
   {cssClass, 
@@ -26,9 +27,7 @@ const Coding = (
             {gitHubUser.login}
           </a>
         </div>
-        : <div>
-          <GitHub /> Loading...      
-        </div> }
+        : <Skeleton animation="wave"/>}
       {areGitHubReposLoaded ?
         <div>
           <h3> Most Recently Updated Repos: </h3>
@@ -47,16 +46,16 @@ const Coding = (
             ))}
           </div>
         </div>
-        : <div> Loading... </div>
+        : <Skeleton animation="wave"/>     
       }
     </div>
   );
 };
 
 Coding.propTypes = {
-  cssClass: PropTypes.object,
-  gitHubRepos: PropTypes.object,
-  gitHubUser: PropTypes.object,
+  cssClass: PropTypes.any,
+  gitHubRepos: PropTypes.any,
+  gitHubUser: PropTypes.any,
   areGitHubReposLoaded: PropTypes.bool,
   isGitHubUserLoaded: PropTypes.bool
 };
