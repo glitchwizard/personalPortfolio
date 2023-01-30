@@ -1,10 +1,16 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Coding.module.css';
-import {GitHub} from '@mui/icons-material';
+import { GitHub } from '@mui/icons-material';
 import { Skeleton } from '@mui/material';
 import Grid from '@mui/material/Grid';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 const Coding = (
   {cssClass, 
@@ -40,18 +46,26 @@ const Coding = (
             <h3> Most Recently Updated Repos: </h3>
             <p />
             <div className={styles.repoList}>
+              
               { (gitHubRepos[0]) ? 
-                gitHubRepos.map((repo, index) => (
+                gitHubRepos.slice(0,20).map((repo, index) => (
                   <a href={repo.html_url} className={styles.repoName} key={repo.name}>
-                    <div className={styles.repoListItem}>
-                      <h3 className={styles.noWrap}>{index + 1} - {repo.name}</h3>
-                      <hr />
-                      <div className={styles.repoInnerCard}>
-                        <p className={styles.repodDesc}> {repo.description} </p>
-                      </div>
-                    </div>
+                    <Card className={styles.repoListItem}>
+                      <CardContent sx={{ margin: 0, }}>
+                        <Typography variant='h6' className={styles.noWrap}>
+                          {index + 1} - {repo.name}
+                        </Typography>
+                        <hr />
+                        <Typography component='div' className={styles.repoInnerCard}>
+                          <Typography variant="body1" className={styles.repoDesc}>
+                            {repo.description} 
+                          </Typography>
+                        </Typography>
+                      </CardContent>
+                    </Card>
                   </a>
-                )) : <div>Error loading repos
+                )) : 
+                <div>Error loading repos
                   <p/>{console.log(gitHubRepos)}
                 </div>
               }

@@ -9,6 +9,7 @@ const theme = {
   },
   typography: {
     fontFamily: 'Montserrat, sans-serif',
+    color: 'white',
   },
   components: {
     MuiCssBaseline: {
