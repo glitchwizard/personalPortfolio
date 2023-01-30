@@ -2,17 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Art.module.css';
 import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 
 const Art = ({cssClass}) => {
 
-  const componentStyle ={
-    
-  };
-
   return (
-    <Grid item sx={[cssClass, componentStyle]}>
+    <Grid item xs={2} sm={1} className={`${cssClass} ${styles.art}`}>
       <div>
-        <h2>ART</h2>
+        <Typography variant='h3'>ART</Typography>
 
         <hr />
 
