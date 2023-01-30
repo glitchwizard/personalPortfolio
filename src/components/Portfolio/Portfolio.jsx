@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-debugger */
 /* eslint-disable no-console */
 import React, { useState, useEffect } from 'react';
@@ -6,6 +7,8 @@ import styles from './Portfolio.module.css';
 import Art from '../Art/Art';
 import Engineering from '../Engineering/Engineering';
 import Coding from '../Coding/Coding';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 
 const Portfolio = () => {
   let [isGitHubUserLoaded, setisGitHubUserLoaded] = useState( false );
@@ -32,28 +35,44 @@ const Portfolio = () => {
         setareGitHubReposLoaded(true);
       });
   }, [isGitHubUserLoaded, areGitHubReposLoaded]);
-  
+
+  // eslint-disable-next-line no-unused-vars
+  const portfolioStyle = {
+    margin: 8,
+    marginTop: 3,
+    padding: (2, 4),
+    width: '95%',
+    boxShadow: 1,
+    borderRadius: 2,
+  };
+
   return (
-    <div className={styles.Portfolio}>
+    <Grid item sx={portfolioStyle}>
       <div className={styles.portfolioBlockContainerWrapper}>
-        <h1>PORTFOLIO</h1>
+        <Typography variant='h2'>
+          PORTFOLIO
+        </Typography>
         <hr style={{ margin: '25px' }} />
-        <div className={styles.portfolioBlockContainer}>
-          <div className={styles.portfolioBlockContainer}>
-            <Coding
-              cssClass={styles.portfolioInnerBlock}
-              gitHubUser={gitHubUser}
-              gitHubRepos={gitHubRepos}
-              areGitHubReposLoaded={areGitHubReposLoaded}
-              isGitHubUserLoaded={isGitHubUserLoaded}
-            />
-             
-            <Art cssClass={styles.portfolioInnerBlock} />
-            <Engineering cssClass={styles.portfolioOuterBlock} />
-          </div>
-        </div>
+        <Grid container 
+          spacing={1} 
+          columns={2}
+          className={styles.portfolioBlockContainer}
+          direction='row'
+          justifyContent='center'
+          alignItems='flex-start'
+        >
+          <Coding
+            cssClass={styles.portfolioInnerBlock}
+            gitHubUser={gitHubUser}
+            gitHubRepos={gitHubRepos}
+            areGitHubReposLoaded={areGitHubReposLoaded}
+            isGitHubUserLoaded={isGitHubUserLoaded}
+          />
+          <Art cssClass={styles.portfolioInnerBlock} />
+          <Engineering cssClass={styles.portfolioOuterBlock} />
+        </Grid>
       </div>
-    </div>
+    </Grid>
   );
 };
 
