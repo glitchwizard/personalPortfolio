@@ -4,6 +4,9 @@
     padding-top: 15px;
     padding-bottom: 15px;
     width: 95%;
+    box-shadow: 1;
+    border-radius: 2;
+    border: '1px solid red';
 }
 
 .portfolioBlockContainerWrapper {

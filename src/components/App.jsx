@@ -8,6 +8,7 @@ import { loadFull } from 'tsparticles';
 import { particleSettings } from './particlesSettings';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import theme_settings from './theme';
+import Grid from '@mui/material/Grid';
 
 const theme = createTheme(theme_settings);
 
@@ -31,6 +32,17 @@ const App = () => {
     setAreParticlesLoaded(true);
   });
 
+  const pageItems = {
+    boxShadow: 1,
+    borderRadius: 2,
+    zIndex: 2,
+    // border: '1px solid red',
+    direction: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <div className={styles.mainPage}>
@@ -45,13 +57,13 @@ const App = () => {
           /> :
           <span />
         }
-        <div className={styles.pageItems}>
+        <Grid container sx={pageItems}>
           <Splash />
           <span id="Portfolio" />
           <Portfolio id="Portfolio" />
           <span id="About" />
           <About id="About" />
-        </div>
+        </Grid>
       </div>
     </ThemeProvider>
   );

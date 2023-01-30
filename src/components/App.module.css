@@ -5,10 +5,10 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
 .pageItems {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     z-index: 2;
 }
 
