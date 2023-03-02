@@ -9,7 +9,7 @@ const theme = {
       main: '#f50057',
     },
     text: {
-      primary: '#03c711',
+      primary: '#eeeeee',
     },
   },
   
