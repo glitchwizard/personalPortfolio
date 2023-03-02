@@ -19,7 +19,7 @@ const Coding = (
   }) => {
   
   return (
-    <Grid item xs={2} sm={1} className={`${cssClass} ${styles.coding}`}>
+    <div className={`${cssClass} ${styles.coding}`}>
       <Typography component='div' variant="h3"> 
         CODING
       </Typography> 
@@ -31,7 +31,7 @@ const Coding = (
           alignItems='center'
         >
           <Grid item xs={1} textAlign='right'>
-            <GitHub fontsize='large' /> 
+            <GitHub fontSize='large' /> 
           </Grid>
           <Grid item xs={2} textAlign='center'>
             <Typography variant='h5'>
@@ -108,7 +108,7 @@ const Coding = (
         </div>
         : <Skeleton animation="wave" height={100}/>     
       }
-    </Grid>
+    </div>
   );
 };
 

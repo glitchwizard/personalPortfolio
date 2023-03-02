@@ -1,15 +1,20 @@
-import { grey } from '@mui/material/colors';
 
 const theme = {
   palette: {
     mode: 'dark',
     primary: {
-      main: grey[500],
+      main: '#ffffff',
+    },
+    secondary: {
+      main: '#f50057',
+    },
+    text: {
+      primary: '#03c711',
     },
   },
+  
   typography: {
     fontFamily: 'Montserrat, sans-serif',
-    color: 'white',
   },
   components: {
     MuiCssBaseline: {
@@ -26,7 +31,6 @@ const theme = {
     },
     MuiPaper: {
       backgroundColor:'blue',
-      color: 'white'
     }
   }
 };

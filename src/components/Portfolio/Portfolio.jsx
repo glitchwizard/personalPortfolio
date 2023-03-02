@@ -1,14 +1,15 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-debugger */
 /* eslint-disable no-console */
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import { useState, useEffect } from 'react';
 import styles from './Portfolio.module.css';
 import Art from '../Art/Art';
 import Engineering from '../Engineering/Engineering';
 import Coding from '../Coding/Coding';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import PortfolioMenu from './PortfolioMenu';
+import Box from '@mui/material/Box';
 
 const Portfolio = () => {
   let [isGitHubUserLoaded, setisGitHubUserLoaded] = useState( false );
@@ -36,31 +37,22 @@ const Portfolio = () => {
       });
   }, [isGitHubUserLoaded, areGitHubReposLoaded]);
 
-  // eslint-disable-next-line no-unused-vars
-  const portfolioStyle = {
-    margin: 8,
-    marginTop: 3,
-    padding: (2, 4),
-    width: '95%',
-    boxShadow: 1,
-    borderRadius: 2,
-  };
-
   return (
-    <Grid item sx={portfolioStyle}>
-      <div className={styles.portfolioBlockContainerWrapper}>
-        <Typography variant='h2'>
-          PORTFOLIO
-        </Typography>
-        <hr style={{ margin: '25px' }} />
-        <Grid container 
-          spacing={1} 
-          columns={2}
-          className={styles.portfolioBlockContainer}
-          direction='row'
-          justifyContent='center'
-          alignItems='flex-start'
-        >
+    <Box>
+      <Typography variant='h1'>
+        PORTFOLIO
+      </Typography>
+      <hr style={{ margin: '25px' }} />
+      <PortfolioMenu />
+      <Grid container 
+        spacing={1} 
+        columns={2}
+        className={styles.portfolioBlockContainer}
+        direction='row'
+        justifyContent='center'
+        alignItems='flex-start'
+      >
+        <Grid item xs={2} sm={1}>
           <Coding
             cssClass={styles.portfolioInnerBlock}
             gitHubUser={gitHubUser}
@@ -68,16 +60,16 @@ const Portfolio = () => {
             areGitHubReposLoaded={areGitHubReposLoaded}
             isGitHubUserLoaded={isGitHubUserLoaded}
           />
+        </Grid>
+        <Grid item xs={2} sm={1}>
           <Art cssClass={styles.portfolioInnerBlock} />
+        </Grid>
+        <Grid item xs={12} sm={12}>
           <Engineering cssClass={styles.portfolioOuterBlock} />
         </Grid>
-      </div>
-    </Grid>
+      </Grid>
+    </Box>
   );
-};
-
-Portfolio.propTypes = {
-  buttonText: PropTypes.string
 };
 
 export default Portfolio;

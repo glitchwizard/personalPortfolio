@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Engineering.module.css';
-import Grid from '@mui/material/Grid';
 
 // TODO: complete this component and refactor Portfolio component to use this
 
@@ -28,7 +27,7 @@ const photos = [
 
 const Engineering = ({cssClass}) => {
   return(
-    <Grid item xs={12} sm={12} className={`${cssClass} ${styles.engineering}`}>
+    <div className={`${cssClass} ${styles.engineering}`}>
       <h2>ENGINEERING</h2>
       <hr />
       <h3>Disney Parade Float Design</h3>
@@ -68,7 +67,7 @@ const Engineering = ({cssClass}) => {
           allowFullScreen
         ></iframe>
       </div>
-    </Grid>
+    </div>
   );
 };
 
