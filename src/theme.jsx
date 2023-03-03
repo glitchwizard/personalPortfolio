@@ -32,7 +32,16 @@ const theme = {
     MuiPaper: {
       backgroundColor:'blue',
     }
-  }
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 700,
+      md: 1250,
+      lg: 1400,
+      xl: 1536,
+    },
+  },
 };
 
 export default theme;

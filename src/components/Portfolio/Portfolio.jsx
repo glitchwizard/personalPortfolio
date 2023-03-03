@@ -38,20 +38,26 @@ const Portfolio = () => {
   }, [isGitHubUserLoaded, areGitHubReposLoaded]);
 
   return (
-    <Box>
-      <Typography variant='h1'>
-        PORTFOLIO
-      </Typography>
-      <hr style={{ margin: '25px' }} />
-      <PortfolioMenu />
+    <Box id='PortfolioBox'>
       <Grid container 
-        spacing={2} 
+        spacing={1} 
         columns={2}
-        className={styles.portfolioBlockContainer}
         direction='row'
         justifyContent='center'
         alignItems='flex-start'
+        id='PortfolioGridContainer'
       >
+        <Grid item xs={6} md={8} lg={10}>
+          <Typography variant='h1'>
+            PORTFOLIO
+          </Typography>
+        </Grid>
+        <Grid item xs={8} md={12}>
+          <hr style={{ margin: '25px' }} />
+        </Grid>
+        <Grid item xs={12}>
+          <PortfolioMenu />
+        </Grid>
         <Grid item xs={2} md={1}>
           <Coding
             cssClass={styles.portfolioInnerBlock}

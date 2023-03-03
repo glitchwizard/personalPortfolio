@@ -5,13 +5,14 @@ import Particles from 'react-particles';
 import { particleSettings } from './components/particlesSettings';
 import styles from './components/App.module.css';
 import { loadFull } from 'tsparticles';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
 import theme_settings from './theme';
 import CssBaseline from '@mui/material/CssBaseline';
 
 const root = ReactDOM.createRoot(document.getElementById('react-app-root'));
 
-const theme = createTheme(theme_settings);
+let theme = createTheme(theme_settings);
+theme = responsiveFontSizes(theme);
 
 const Background = () => {
   const [areParticlesLoaded, setAreParticlesLoaded] = useState(false);

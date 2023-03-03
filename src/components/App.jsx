@@ -5,19 +5,24 @@ import Grid from '@mui/material/Grid';
 
 const App = () => {
   return (
-    <Grid container spacing={2} justifyContent='center' id='mainPageGridContainer'>
+    <Grid container spacing={2} 
+      justifyContent='center' 
+      id='mainPageGridContainer'
+    >
       <Grid item id="mainPageGridItem">
         <Grid container 
           id='pageItemContainer'
-          spacing={12}>
-          <Grid item>
+          spacing={3}
+          justifyContent='center'
+        >
+          <Grid item xs={10} md={8} id='splashContainer'>
             <Splash />
           </Grid>
-          <Grid item>
+          <Grid item xs={12} md={10}>
             <span id="Portfolio" />
             <Portfolio id="Portfolio" />
           </Grid>
-          <Grid item>
+          <Grid item xs={12} md={10}>
             <span id="About" />
             <About id="About" />
           </Grid>
