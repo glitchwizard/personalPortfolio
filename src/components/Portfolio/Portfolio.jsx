@@ -45,14 +45,14 @@ const Portfolio = () => {
       <hr style={{ margin: '25px' }} />
       <PortfolioMenu />
       <Grid container 
-        spacing={1} 
+        spacing={2} 
         columns={2}
         className={styles.portfolioBlockContainer}
         direction='row'
         justifyContent='center'
         alignItems='flex-start'
       >
-        <Grid item xs={2} sm={1}>
+        <Grid item xs={2} md={1}>
           <Coding
             cssClass={styles.portfolioInnerBlock}
             gitHubUser={gitHubUser}
@@ -61,11 +61,11 @@ const Portfolio = () => {
             isGitHubUserLoaded={isGitHubUserLoaded}
           />
         </Grid>
-        <Grid item xs={2} sm={1}>
-          <Art cssClass={styles.portfolioInnerBlock} />
+        <Grid item xs={2} md={1}>
+          <Art cssClass={styles.portfolioInnerBlock}/>
         </Grid>
-        <Grid item xs={12} sm={12}>
-          <Engineering cssClass={styles.portfolioOuterBlock} />
+        <Grid item sm={2} md={2}>
+          <Engineering cssClass={styles.portfolioOuterBlock}/>
         </Grid>
       </Grid>
     </Box>
