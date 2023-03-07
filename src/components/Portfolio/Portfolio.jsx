@@ -59,12 +59,12 @@ const Portfolio = () => {
         alignItems='flex-start'
         id='PortfolioGridContainer'
       >
-        <Grid item xs={6} md={8} lg={10}>
+        <Grid item xs={10} md={8} lg={10}>
           <Typography variant='h1'>
             PORTFOLIO
           </Typography>
         </Grid>
-        <Grid item xs={8} md={12}>
+        <Grid item xs={10} md={12}>
           <hr style={{ margin: '25px' }} />
         </Grid>
         <Grid item xs={12}>
