@@ -15,8 +15,13 @@ const App = () => {
           spacing={3}
           justifyContent='center'
         >
-          <Grid item xs={10} md={8} id='splashContainer'>
-            <Splash />
+          <Grid item 
+            xs={12} 
+            md={8} 
+            id='splashContainer'
+          >
+            <Splash 
+            />
           </Grid>
           <Grid item xs={12} md={10}>
             <span id="Portfolio" />

@@ -26,6 +26,7 @@ function IntroBlock() {
             justifyContent={'center'}
             id='blockRow1Container'
             spacing={0.5}
+            wrap='nowrap'
           >
             {
               ['ENGINEER', 'DEVELOPER', 'ARTIST'].map((skill) => (
@@ -45,6 +46,7 @@ function IntroBlock() {
               justifyContent={'center'}
               spacing={0.5}
               id='blockRow2Container'
+              wrap='nowrap'
             >
               {
                 ['CONSULTANT', 'ENTERTAINER', 'BUILDER'].map((skill) => (
