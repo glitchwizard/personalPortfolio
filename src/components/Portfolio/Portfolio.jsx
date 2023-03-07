@@ -1,20 +1,33 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-debugger */
 /* eslint-disable no-console */
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import { useState, useEffect } from 'react';
 import styles from './Portfolio.module.css';
 import Art from '../Art/Art';
 import Engineering from '../Engineering/Engineering';
 import Coding from '../Coding/Coding';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import PortfolioMenu from './PortfolioMenu';
+import Box from '@mui/material/Box';
 
 const Portfolio = () => {
   let [isGitHubUserLoaded, setisGitHubUserLoaded] = useState( false );
   let [gitHubUser, setgitHubUser] = useState( [] );
   let [areGitHubReposLoaded, setareGitHubReposLoaded] = useState( false );
   let [gitHubRepos, setgitHubRepos] = useState( [] );
+  let [isActive, setIsActive] = useState( {Coding: true, Art: false, 'Mechanical Engineering': false} );
+
+  const handleIsActive = (section) => {
+    console.log(isActive);
+    console.log(section);
+
+    if(!isActive[section]){
+      const newObject = { ...isActive, [section]: true };
+      setIsActive(newObject);
+    } else {
+      const newObject = { ...isActive, [section]: false };
+      setIsActive(newObject);
+    }
+  };
 
   useEffect (() => {
     let userInfo = {};
@@ -36,48 +49,59 @@ const Portfolio = () => {
       });
   }, [isGitHubUserLoaded, areGitHubReposLoaded]);
 
-  // eslint-disable-next-line no-unused-vars
-  const portfolioStyle = {
-    margin: 8,
-    marginTop: 3,
-    padding: (2, 4),
-    width: '95%',
-    boxShadow: 1,
-    borderRadius: 2,
-  };
-
   return (
-    <Grid item sx={portfolioStyle}>
-      <div className={styles.portfolioBlockContainerWrapper}>
-        <Typography variant='h2'>
-          PORTFOLIO
-        </Typography>
-        <hr style={{ margin: '25px' }} />
-        <Grid container 
-          spacing={1} 
-          columns={2}
-          className={styles.portfolioBlockContainer}
-          direction='row'
-          justifyContent='center'
-          alignItems='flex-start'
-        >
-          <Coding
-            cssClass={styles.portfolioInnerBlock}
-            gitHubUser={gitHubUser}
-            gitHubRepos={gitHubRepos}
-            areGitHubReposLoaded={areGitHubReposLoaded}
-            isGitHubUserLoaded={isGitHubUserLoaded}
-          />
-          <Art cssClass={styles.portfolioInnerBlock} />
-          <Engineering cssClass={styles.portfolioOuterBlock} />
+    <Box id='PortfolioBox'>
+      <Grid container 
+        spacing={1} 
+        columns={2}
+        direction='row'
+        justifyContent='center'
+        alignItems='flex-start'
+        id='PortfolioGridContainer'
+      >
+        <Grid item xs={6} md={8} lg={10}>
+          <Typography variant='h1'>
+            PORTFOLIO
+          </Typography>
         </Grid>
-      </div>
-    </Grid>
-  );
-};
+        <Grid item xs={8} md={12}>
+          <hr style={{ margin: '25px' }} />
+        </Grid>
+        <Grid item xs={12}>
+          <PortfolioMenu 
+            handleIsActive={handleIsActive} 
+            isActive={isActive}
+          />
+        </Grid>
+        {isActive['Coding'] ? 
+          <Grid item xs={2} md={1}>
+            <Coding
+              cssClass={styles.portfolioInnerBlock}
+              gitHubUser={gitHubUser}
+              gitHubRepos={gitHubRepos}
+              areGitHubReposLoaded={areGitHubReposLoaded}
+              isGitHubUserLoaded={isGitHubUserLoaded}
+            />
+          </Grid>
+          : null
+        }
+        {isActive['Art'] ? 
+          <Grid item xs={2} md={1}>
+            <Art cssClass={styles.portfolioInnerBlock}/>
+          </Grid>
+          : null
+        }
+        {isActive['Mechanical Engineering'] ? 
+        // TODO: Fix this so that it's centered
+          <Grid item sm={2} md={2}>
+            <Engineering cssClass={styles.portfolioOuterBlock}/>
+          </Grid>
+          : null
+        }
 
-Portfolio.propTypes = {
-  buttonText: PropTypes.string
+      </Grid>
+    </Box>
+  );
 };
 
 export default Portfolio;

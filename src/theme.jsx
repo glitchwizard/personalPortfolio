@@ -1,15 +1,20 @@
-import { grey } from '@mui/material/colors';
 
 const theme = {
   palette: {
     mode: 'dark',
     primary: {
-      main: grey[500],
+      main: '#ffffff',
+    },
+    secondary: {
+      main: '#f50057',
+    },
+    text: {
+      primary: '#eeeeee',
     },
   },
+  
   typography: {
     fontFamily: 'Montserrat, sans-serif',
-    color: 'white',
   },
   components: {
     MuiCssBaseline: {
@@ -26,9 +31,17 @@ const theme = {
     },
     MuiPaper: {
       backgroundColor:'blue',
-      color: 'white'
     }
-  }
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 700,
+      md: 1250,
+      lg: 1400,
+      xl: 1536,
+    },
+  },
 };
 
 export default theme;
