@@ -1,20 +1,15 @@
-/* eslint-disable no-debugger */
 /* eslint-disable no-console */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Coding.module.css';
 import { GitHub } from '@mui/icons-material';
-import { Skeleton } from '@mui/material';
+import { Accordion, AccordionSummary, AccordionDetails, Skeleton } from '@mui/material';
 import Grid from '@mui/material/Grid';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
-import CardHeader from '@mui/material/CardHeader';
-import Avatar from '@mui/material/Avatar';
-import { red } from '@mui/material/colors';
-import IconButton from '@mui/material/IconButton';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { useState } from 'react';
+
 
 const Coding = (
   {cssClass, 
@@ -26,7 +21,13 @@ const Coding = (
   }) => {
 
   let isArtActive = isActiveTracker['Art'];
-    
+
+  const [expanded, setExpanded] = useState(false);
+
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
+
   return (
     <div className={`${cssClass} ${styles.coding}`}>
       <Typography component='div' variant="h3"> 
@@ -92,56 +93,50 @@ const Coding = (
           <h3> Most Recently Updated Repos: </h3>
           <p />
           <div className={styles.repoList}>
-            
             { (gitHubRepos[0]) ? 
               <Grid container
                 spacing={2}
               >
+
                 {gitHubRepos.slice(0,20).map((repo, index) => (
                   <Grid item 
                     key={repo.name} 
                     id={index} 
                     xs={!isArtActive ? 12 : 12} 
-                    sm={!isArtActive ? 12 : 6} 
-                    md={!isArtActive ? 12 : 12} 
-                    xl={!isArtActive ? 3 : 6}>
-                    <a href={repo.html_url} className={styles.repoName} >
-                      <Card className={styles.repoListItem}>
-                        <CardHeader
-                          avatar={
-                            <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                              {index+1}
-                            </Avatar>
-                          }
-                          action={
-                            <IconButton aria-label="settings">
-                              <MoreVertIcon />
-                            </IconButton>
-                          }
-                          title={repo.name}
-                          subheader="-------"
-                        />
-                        <CardContent 
-                          // sx={{ margin: 0, }}
+                    sm={!isArtActive ? 12 : 12} 
+                    md={!isArtActive ? 6 : 12} 
+                    xl={!isArtActive ? 6 : 12}>
+                    <Accordion expanded={expanded === index} onChange={handleChange(index)}>
+                      <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                      >
+                        <Typography 
+                          variant='h4' 
+                          sx={{ 
+                            width: '10%', 
+                            flexShrink: 0, 
+                            textAlign: 'left'
+                          }}
                         >
-                          <Typography variant='h6' className={styles.noWrap}>
-                            {/* {index + 1} - {repo.name} */}
-                          </Typography>
-                          <hr />
-                          <Typography component='div' className={styles.repoInnerCard}>
-                            <Typography variant="body1" className={styles.repoDesc}>
-                              {repo.description} 
-                            </Typography>
-                          </Typography>
-                        </CardContent>
-                      </Card>
-                    </a>
+                          {index+1}
+                        </Typography>
+                        <Typography sx={{ color: 'text.secondary', overflow: 'hidden'}}>
+                          <Link href={repo.html_url} sx={{overflow: 'hidden'}}>
+                            {repo.name}
+                          </Link>
+                        </Typography>
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        <Typography>
+                          {repo.description} 
+                        </Typography>
+                      </AccordionDetails>
+                    </Accordion>
                   </Grid>
-          
-                ))
-                }</Grid> : 
+                ))}
+              </Grid> : 
               <div>Error loading repos
-                <p/>{console.log(gitHubRepos)}
+                <p/>{console.warn(gitHubRepos)}
               </div>
             }
           </div>

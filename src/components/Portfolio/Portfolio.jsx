@@ -75,7 +75,7 @@ const Portfolio = () => {
         </Grid>
         {isActive['Coding'] ? 
           <Grid item 
-            xs={!isActive['Art'] ? 12 : 12} 
+            xs={12} 
             md={!isActive['Art'] ? 12 : 6}
           >
             <Coding
@@ -91,7 +91,7 @@ const Portfolio = () => {
         }
         {isActive['Art'] ? 
           <Grid item 
-            xs={!isActive['Coding'] ? 12 : 6} 
+            xs={12} 
             md={!isActive['Coding'] ? 12 : 6}
           >
             <Art cssClass={styles.portfolioInnerBlock}/>
