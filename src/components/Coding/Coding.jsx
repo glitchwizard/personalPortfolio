@@ -104,8 +104,8 @@ const Coding = (
                     id={index} 
                     xs={!isArtActive ? 12 : 12} 
                     sm={!isArtActive ? 12 : 12} 
-                    md={!isArtActive ? 6 : 6} 
-                    xl={!isArtActive ? 6 : 6}>
+                    md={!isArtActive ? 6 : 12} 
+                    xl={!isArtActive ? 6 : 12}>
                     <Accordion expanded={expanded === index} onChange={handleChange(index)}>
                       <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
