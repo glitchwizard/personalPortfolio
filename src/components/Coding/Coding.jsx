@@ -21,8 +21,11 @@ const Coding = (
     gitHubRepos, 
     gitHubUser,
     areGitHubReposLoaded,
-    isGitHubUserLoaded
+    isGitHubUserLoaded,
+    isActiveTracker
   }) => {
+
+  let isArtActive = isActiveTracker['Art'];
     
   return (
     <div className={`${cssClass} ${styles.coding}`}>
@@ -95,7 +98,13 @@ const Coding = (
                 spacing={2}
               >
                 {gitHubRepos.slice(0,20).map((repo, index) => (
-                  <Grid item key={repo.name} id={index} xs={12} sm={6} md={12} xl={6}>
+                  <Grid item 
+                    key={repo.name} 
+                    id={index} 
+                    xs={!isArtActive ? 12 : 12} 
+                    sm={!isArtActive ? 12 : 6} 
+                    md={!isArtActive ? 12 : 12} 
+                    xl={!isArtActive ? 3 : 6}>
                     <a href={repo.html_url} className={styles.repoName} >
                       <Card className={styles.repoListItem}>
                         <CardHeader
@@ -148,7 +157,8 @@ Coding.propTypes = {
   gitHubRepos: PropTypes.array,
   gitHubUser: PropTypes.any,
   areGitHubReposLoaded: PropTypes.bool,
-  isGitHubUserLoaded: PropTypes.bool
+  isGitHubUserLoaded: PropTypes.bool,
+  isActiveTracker: PropTypes.object
 };
 
 Coding.defaultProps = {};
