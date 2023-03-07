@@ -7,7 +7,7 @@
      position: absolute;
      left: 5%;
      top: 25%;
-     min-width: 180px;
+     min-width: 383px;
      border-radius: 3px;
      max-width: 35%;
  }
@@ -17,5 +17,5 @@
  }
 
  .itemStyle {
-    background-color: rgba(0, 0, 0, 0.5);  
+    background-color: rgba(0, 0, 0, 0.3);  
  }
