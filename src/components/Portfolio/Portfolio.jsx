@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-debugger */
 /* eslint-disable no-console */
 import { useState, useEffect } from 'react';
 import styles from './Portfolio.module.css';
@@ -16,6 +14,20 @@ const Portfolio = () => {
   let [gitHubUser, setgitHubUser] = useState( [] );
   let [areGitHubReposLoaded, setareGitHubReposLoaded] = useState( false );
   let [gitHubRepos, setgitHubRepos] = useState( [] );
+  let [isActive, setIsActive] = useState( {Coding: true, Art: false, 'Mechanical Engineering': false} );
+
+  const handleIsActive = (section) => {
+    console.log(isActive);
+    console.log(section);
+
+    if(!isActive[section]){
+      const newObject = { ...isActive, [section]: true };
+      setIsActive(newObject);
+    } else {
+      const newObject = { ...isActive, [section]: false };
+      setIsActive(newObject);
+    }
+  };
 
   useEffect (() => {
     let userInfo = {};
@@ -56,23 +68,37 @@ const Portfolio = () => {
           <hr style={{ margin: '25px' }} />
         </Grid>
         <Grid item xs={12}>
-          <PortfolioMenu />
-        </Grid>
-        <Grid item xs={2} md={1}>
-          <Coding
-            cssClass={styles.portfolioInnerBlock}
-            gitHubUser={gitHubUser}
-            gitHubRepos={gitHubRepos}
-            areGitHubReposLoaded={areGitHubReposLoaded}
-            isGitHubUserLoaded={isGitHubUserLoaded}
+          <PortfolioMenu 
+            handleIsActive={handleIsActive} 
+            isActive={isActive}
           />
         </Grid>
-        <Grid item xs={2} md={1}>
-          <Art cssClass={styles.portfolioInnerBlock}/>
-        </Grid>
-        <Grid item sm={2} md={2}>
-          <Engineering cssClass={styles.portfolioOuterBlock}/>
-        </Grid>
+        {isActive['Coding'] ? 
+          <Grid item xs={2} md={1}>
+            <Coding
+              cssClass={styles.portfolioInnerBlock}
+              gitHubUser={gitHubUser}
+              gitHubRepos={gitHubRepos}
+              areGitHubReposLoaded={areGitHubReposLoaded}
+              isGitHubUserLoaded={isGitHubUserLoaded}
+            />
+          </Grid>
+          : null
+        }
+        {isActive['Art'] ? 
+          <Grid item xs={2} md={1}>
+            <Art cssClass={styles.portfolioInnerBlock}/>
+          </Grid>
+          : null
+        }
+        {isActive['Mechanical Engineering'] ? 
+        // TODO: Fix this so that it's centered
+          <Grid item sm={2} md={2}>
+            <Engineering cssClass={styles.portfolioOuterBlock}/>
+          </Grid>
+          : null
+        }
+
       </Grid>
     </Box>
   );
