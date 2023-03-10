@@ -20,8 +20,7 @@ const App = () => {
             md={8} 
             id='splashContainer'
           >
-            <Splash 
-            />
+            <Splash />
           </Grid>
           <Grid item xs={12} md={10}>
             <span id="Portfolio" />

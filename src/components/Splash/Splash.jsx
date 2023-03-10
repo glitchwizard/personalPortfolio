@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import IntroBlock from './IntroBlock';
 import styles from './Splash.module.css';
@@ -15,38 +16,50 @@ function Splash() {
     <Box style={componentStyle}>
       <Grid 
         container 
-        spacing={1}
         justifyContent='center'
+        id='splashGridMainContainer'
+        spacing={3}
       >
-        <Grid item xs={12}>
+        <Grid item xs={12} id='splashGridHeaderItem'>
           <Header />
         </Grid>
-        <Grid item xs={12} sm={10} md={12}>
-          <img 
-            className={styles.splashImg} 
-            src="https://charlesvictus.files.wordpress.com/2016/12/cropped-12241623_10101849344650488_8524571144034335838_n12.jpg" 
-          />
+        <Grid 
+          item 
+          xs={12} 
+          sm={10} 
+          md={12} 
+          id='splashGridImageItem'
+        >
           <Grid 
+            id='splashImageGridContainer'
             container 
-            spacing={1} 
             justifyContent={{xs: 'center', sm:'flex-start'}}
             sx={{
-              position: 'absolute',
-              top: '22%',
-              left: 0,
+              borderRadius: '0.5em',
+              backgroundImage: 'url("https://charlesvictus.files.wordpress.com/2016/12/cropped-12241623_10101849344650488_8524571144034335838_n1-1.jpg")',
+              // backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+              backgroundPositionX: 'center',
+              backgroundPositionY: 'center',
             }}
           >
             <Grid 
-              xs={2}
-              sm={2}
-              md={3}
+              item
+              id='imageLeftSpace'
+              xs={1}
+              sm={1}
+              md={1}
             />
             <Grid 
               item 
+              id='imageIntroBlockGridItem'
               xs={10}
               sm={6}
-              md={4}
-              lg={4}
+              md={6}
+              lg={6}
+              sx={{
+                my: 12
+              }}
             >
               <IntroBlock/> 
             </Grid>
