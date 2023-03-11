@@ -14,6 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById('react-app-root'));
 let theme = createTheme(theme_settings);
 theme = responsiveFontSizes(theme);
 
+// eslint-disable-next-line no-unused-vars
 const Background = () => {
   const [areParticlesLoaded, setAreParticlesLoaded] = useState(false);
   const particlesInit = useCallback(async (engine) => {
@@ -34,7 +35,6 @@ const Background = () => {
 
   return (
     <div>
-      <CssBaseline />
       { areParticlesLoaded ?
         <Particles
           className={styles.particleWrapper}
@@ -54,9 +54,8 @@ const Background = () => {
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <Background />
+      <CssBaseline />
       <App id="appRoot"/>
     </ThemeProvider>
-
   </React.StrictMode>
 );

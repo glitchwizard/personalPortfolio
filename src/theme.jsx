@@ -11,6 +11,9 @@ const theme = {
     text: {
       primary: '#eeeeee',
     },
+    background: {
+      default: '#000000'
+    }
   },
   
   typography: {

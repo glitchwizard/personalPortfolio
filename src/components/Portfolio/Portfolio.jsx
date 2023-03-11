@@ -7,6 +7,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import PortfolioMenu from './PortfolioMenu';
 import Box from '@mui/material/Box';
+import Collapse from '@mui/material/Collapse';
 
 const Portfolio = () => {
   let [isGitHubUserLoaded, setisGitHubUserLoaded] = useState( false );
@@ -18,7 +19,7 @@ const Portfolio = () => {
       Coding: true, 
       Art: false, 
       'Mechanical Engineering': false
-    } );
+    } );  
 
   const handleIsActive = (section) => {
     if(!isActive[section]){
@@ -73,10 +74,13 @@ const Portfolio = () => {
             isActive={isActive}
           />
         </Grid>
-        {isActive['Coding'] ? 
-          <Grid item 
-            xs={12} 
-            md={!isActive['Art'] ? 12 : 6}
+        <Grid item 
+          xs={12} 
+          md={!isActive['Art'] ? 12 : 6}
+        >
+          <Collapse 
+            in={isActive['Coding']}
+            unmountOnExit
           >
             <Coding
               cssClass={styles.portfolioInnerBlock}
@@ -86,24 +90,26 @@ const Portfolio = () => {
               isGitHubUserLoaded={isGitHubUserLoaded}
               isActiveTracker={isActive}
             />
-          </Grid>
-          : null
-        }
-        {isActive['Art'] ? 
-          <Grid item 
-            xs={12} 
-            md={!isActive['Coding'] ? 12 : 6}
+          </Collapse>
+        </Grid>
+        <Grid item 
+          xs={12} 
+          md={!isActive['Coding'] ? 12 : 6}
+        >
+          <Collapse 
+            in={isActive['Art']}
           >
             <Art cssClass={styles.portfolioInnerBlock}/>
-          </Grid>
-          : null
-        }
-        {isActive['Mechanical Engineering'] ? 
-          <Grid item xs={10} md={10}>
+          </Collapse>
+        </Grid>
+        <Grid item xs={10} md={10}>
+          <Collapse 
+            in={isActive['Mechanical Engineering']}
+            unmountOnExit
+          >
             <Engineering cssClass={styles.portfolioOuterBlock}/>
-          </Grid>
-          : null
-        }
+          </Collapse>
+        </Grid>
 
       </Grid>
     </Box>
