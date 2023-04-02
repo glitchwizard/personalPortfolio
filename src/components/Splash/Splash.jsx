@@ -46,17 +46,17 @@ function Splash() {
             <Grid 
               item
               id='imageLeftSpace'
-              xs={1}
-              sm={1}
+              xs={0.5}
+              sm={0.5}
               md={1}
             />
             <Grid 
               item 
               id='imageIntroBlockGridItem'
               xs={10}
-              sm={6}
-              md={6}
-              lg={6}
+              sm={10}
+              md={7}
+              lg={7}
               sx={{
                 my: 12
               }}
