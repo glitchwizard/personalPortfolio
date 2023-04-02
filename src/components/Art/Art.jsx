@@ -4,19 +4,18 @@ import styles from './Art.module.css';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-const Art = ({cssClass}) => {
-
+const Art = ({ cssClass }) => {
   return (
     <Grid className={`${cssClass} ${styles.art}`}>
       <div>
-        <Typography variant='h3'>ART</Typography>
+        <Typography variant="h3">ART</Typography>
 
         <hr />
 
         <h3>Albums I've recorded on:</h3>
         <div className={styles.spotifyFlex}>
           <iframe
-            loading='lazy'
+            loading="lazy"
             className={styles.iFrameDivSpotify}
             src="https://open.spotify.com/embed/album/7rYeayveuaNnZHEc0lbWGI"
           />
@@ -40,14 +39,14 @@ const Art = ({cssClass}) => {
         <div className={styles.bandcampContainer}>
           <iframe
             className={styles.iFrameDivBandcamp}
-            src="https://bandcamp.com/EmbeddedPlayer/album=3523553161/size=large/bgcol=333333/linkcol=e32c14/artwork=small/transparent=true/"
+            src="https://bandcamp.com/EmbeddedPlayer/album=3523553161/size=large/bgcol=333333/linkcol=e32c14/tracklist=true/artwork=small/transparent=true/"
             seamless
-            frameBorder="0"
           >
-            <a href="http://targetfortomorrow.bandcamp.com/album/the-devastator">
+            <a href="https://targetfortomorrow.bandcamp.com/album/the-devastator">
               The Devastator by Target For Tomorrow
             </a>
           </iframe>
+
         </div>
 
         <h3>Music I've Produced:</h3>
@@ -81,10 +80,9 @@ const Art = ({cssClass}) => {
     </Grid>
   );
 };
- 
 
 Art.propTypes = {
-  cssClass: PropTypes.string
+  cssClass: PropTypes.string,
 };
 
 Art.defaultProps = {};
