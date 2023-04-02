@@ -43,7 +43,8 @@ function IntroBlock() {
                 <Grid key={skill} item>
                   <Paper
                     className={styles.itemStyle}
-                    sx={{p:0.5, m:0.5}}
+                    sx={{p:0.5, m:0.5, fontSize: {md:'1vw', sm:'1.75vw', xs:'2.5vw'}}}
+
                   >
                     {skill}
                   </Paper>
@@ -63,7 +64,7 @@ function IntroBlock() {
                   <Grid key={skill} item>
                     <Paper 
                       className={styles.itemStyle}
-                      sx={{p:0.5}}
+                      sx={{p:0.5, fontSize: {md:'1vw', sm:'1.75vw', xs:'2.5vw'}}}
                     >
                       {skill}
                     </Paper>
