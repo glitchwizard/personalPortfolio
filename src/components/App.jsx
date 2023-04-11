@@ -10,8 +10,9 @@ const App = () => {
       <Grid container spacing={2} 
         justifyContent='center' 
         id='mainPageGridContainer'
+        sx={{px: 2}}
       >
-        <Grid item id="mainPageGridItem">
+        <Grid item id="mainPageGridItem" zeroMinWidth>
           <Grid container 
             id='pageItemContainer'
             spacing={3}
