@@ -37,7 +37,6 @@ function Splash() {
             sx={{
               borderRadius: '0.5em',
               backgroundImage: 'url("https://charlesvictus.files.wordpress.com/2016/12/cropped-12241623_10101849344650488_8524571144034335838_n1-1.jpg")',
-              // backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
               backgroundPositionX: 'center',
               backgroundPositionY: 'center',

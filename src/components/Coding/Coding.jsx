@@ -99,29 +99,50 @@ const Coding = (
               >
 
                 {gitHubRepos.slice(0,20).map((repo, index) => (
-                  <Grid item 
+                  <Grid item
                     key={repo.name} 
                     id={index} 
                     xs={!isArtActive ? 12 : 12} 
                     sm={!isArtActive ? 12 : 12} 
                     md={!isArtActive ? 6 : 12} 
                     xl={!isArtActive ? 6 : 12}>
-                    <Accordion expanded={expanded === index} onChange={handleChange(index)}>
+                    <Accordion expanded={expanded === index} onChange={handleChange(index)} id='accordionRoot' >
                       <AccordionSummary
+                        id='accordionSummaryRoot'
                         expandIcon={<ExpandMoreIcon />}
+                        sx={{
+                          backgroundColor: 'background.paper',
+                          borderBottom: '1px solid rgba(0, 0, 0, .125)',
+                          justifyContent: 'space-between',
+                          '& .MuiAccordionSummary-content': {
+                            maxWidth: {xs: '92%', sm: '100%'},
+                            overflow: 'clip',
+                          }
+                        }}
+
                       >
                         <Typography 
                           variant='h4' 
                           sx={{ 
-                            width: '10%', 
-                            flexShrink: 0, 
-                            textAlign: 'left'
+                            flexShrink: 100, 
+                            textAlign: 'left',
+                            mr: 1
                           }}
                         >
                           {index+1}
                         </Typography>
-                        <Typography sx={{ color: 'text.secondary', overflow: 'hidden'}}>
-                          <Link href={repo.html_url} sx={{overflow: 'hidden'}}>
+                        <Typography 
+                          sx={{ 
+                            color: 'text.secondary', 
+                          }}>
+                          <Link 
+                            href={repo.html_url} 
+                            sx={{
+                              overflow: 'clip',
+                              whiteSpace: 'nowrap',
+                              display: 'block',
+                            }}
+                          >
                             {repo.name}
                           </Link>
                         </Typography>

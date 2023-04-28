@@ -36,14 +36,15 @@ function IntroBlock() {
             justifyContent={'center'}
             id='blockRow1Container'
             spacing={0.5}
-            wrap='nowrap'
+            rowSpacing={0}
+            sx={{mb:0.5}}
           >
             {
               ['ENGINEER', 'DEVELOPER', 'ARTIST'].map((skill) => (
                 <Grid key={skill} item>
                   <Paper
                     className={styles.itemStyle}
-                    sx={{p:0.5, m:0.5}}
+                    sx={{p:0.5, fontSize: {md:'1.25vw', sm:'2vw', xs:'4vw'}}}
                   >
                     {skill}
                   </Paper>
@@ -56,14 +57,14 @@ function IntroBlock() {
               justifyContent={'center'}
               spacing={0.5}
               id='blockRow2Container'
-              wrap='nowrap'
+              rowSpacing={0}
             >
               {
                 ['CONSULTANT', 'ENTERTAINER', 'BUILDER'].map((skill) => (
                   <Grid key={skill} item>
                     <Paper 
                       className={styles.itemStyle}
-                      sx={{p:0.5}}
+                      sx={{p:0.5, fontSize: {md:'1.25vw', sm:'2vw', xs:'4vw'}}}
                     >
                       {skill}
                     </Paper>
@@ -80,11 +81,11 @@ function IntroBlock() {
           >
             <Grid 
               item 
-              sx={{my:2, mx:3}} 
+              sx={{my:2, mx:0}} 
               xs={12}
               // display={{xs:'none',md:'inherit'}}
             >
-              <Typography variant="body2" align={'justify'}>
+              <Typography variant="body1" align={'left'}>
                 A creative solution generator, bringing to the table a truly 
                 diverse set of skills, with real-world experience as a 
                 full-stack web developer and software engineer, mechanical engineer, 

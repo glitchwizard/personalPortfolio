@@ -39,10 +39,10 @@ const theme = {
   breakpoints: {
     values: {
       xs: 0,
-      sm: 700,
-      md: 1250,
-      lg: 1400,
-      xl: 1536,
+      sm: 500,
+      md: 1024,
+      lg: 1200,
+      xl: 1300,
     },
   },
 };
