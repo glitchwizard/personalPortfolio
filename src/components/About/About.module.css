@@ -32,6 +32,6 @@
 .imgWall {}
 
 .aboutImg {
-    min-height: 400px;
-    object-fit: cover;
+    /* min-height: 400px;
+    object-fit: cover; */
 }

@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 
 const Art = ({ cssClass }) => {
   return (
-    <Grid className={`${cssClass} ${styles.art}`}>
+    <Grid conatainer className={`${cssClass} ${styles.art}`}>
       <div>
         <Typography variant="h3">ART</Typography>
 

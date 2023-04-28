@@ -61,9 +61,10 @@ const Engineering = ({cssClass}) => {
         justifyContent="center"        
       >
         <Grid item xs={12}>
-          <Typography variant='h1'>
+          <Typography variant='h3'>
             ENGINEERING
           </Typography>
+          <hr />
         </Grid>      
         <Grid item>
           <Divider variant='middle'/>
@@ -73,7 +74,7 @@ const Engineering = ({cssClass}) => {
           sx={{m:1}}
           justifyContent='center'
         >
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <Card sx={{p:2}}>
               <CardContent>
                 <Typography variant='h3'>
@@ -89,7 +90,7 @@ const Engineering = ({cssClass}) => {
               </CardContent>
             </Card>
           </Grid> 
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <Card>
               <CardContent>
                 <Typography variant='body1'>
@@ -108,7 +109,7 @@ const Engineering = ({cssClass}) => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={8}>
+          <Grid item xs={12} md={8}>
             <Typography variant='h2'>
               Gallery
             </Typography>
@@ -137,7 +138,7 @@ const Engineering = ({cssClass}) => {
               </Button>
             </Link>
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={12} md={6}>
             <Typography 
               variant="h3"
             >
