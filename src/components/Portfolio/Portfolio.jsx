@@ -1,90 +1,119 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import { useState, useEffect } from 'react';
 import styles from './Portfolio.module.css';
 import Art from '../Art/Art';
 import Engineering from '../Engineering/Engineering';
 import Coding from '../Coding/Coding';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import PortfolioMenu from './PortfolioMenu';
+import Box from '@mui/material/Box';
+import Collapse from '@mui/material/Collapse';
 
 const Portfolio = () => {
-  const [error, setError] = useState(null);
-  const [isGitHubUserLoaded, setisGitHubUserLoaded] = useState( false );
-  const [gitHubUser, setgitHubUser] = useState( [] );
-  const [areGitHubReposLoaded, setareGitHubReposLoaded] = useState( false );
-  const [gitHubRepos, setgitHubRepos] = useState( [] );
-  
+  let [isGitHubUserLoaded, setisGitHubUserLoaded] = useState( false );
+  let [gitHubUser, setgitHubUser] = useState( [] );
+  let [areGitHubReposLoaded, setareGitHubReposLoaded] = useState( false );
+  let [gitHubRepos, setgitHubRepos] = useState( [] );
+  let [isActive, setIsActive] = useState( 
+    {
+      Coding: true, 
+      Art: false, 
+      'Mechanical Engineering': false
+    } );  
+
+  const handleIsActive = (section) => {
+    if(!isActive[section]){
+      const newObject = { ...isActive, [section]: true };
+      setIsActive(newObject);
+    } else {
+      const newObject = { ...isActive, [section]: false };
+      setIsActive(newObject);
+    }
+  };
+
   useEffect (() => {
-    let localUserInfo;
+    let userInfo = {};
 
-    if (localStorage.getItem('localUserInfo')){
-      localUserInfo = JSON.parse(localStorage.getItem('localUserInfo'));
-      setgitHubUser(localUserInfo.user);
-      setgitHubRepos(localUserInfo.repos);
-      setisGitHubUserLoaded(true);
-      setareGitHubReposLoaded(true);
-    }
-    
-    if (localUserInfo && new Date().toDateString() !== localUserInfo.date){
-      localUserInfo = null;
-    }
+    fetch('https://api.github.com/users/glitchwizard')
+      .then(res => res.json())
+      .then((userFetchResult) => {
+        userInfo.user = userFetchResult;
+        setgitHubUser(userFetchResult);
+        setisGitHubUserLoaded(true);
+      });
+        
+    fetch('https://api.github.com/users/glitchwizard/repos?sort=updated')
+      .then(res => res.json())
+      .then((repoListFetchResult) => {
+        userInfo.repos = repoListFetchResult;
+        setgitHubRepos(repoListFetchResult);
+        setareGitHubReposLoaded(true);
+      });
+  }, [isGitHubUserLoaded, areGitHubReposLoaded]);
 
-    if (!localUserInfo){
-      fetch('https://api.github.com/users/glitchwizard')
-        .then(res => res.json())
-        .then(
-          (result) => {
-            setisGitHubUserLoaded(true);
-            setgitHubUser(result);
-            localUserInfo.user = result;
-            console.log(localUserInfo);
-          },
-          (error) => {
-            setisGitHubUserLoaded(true);
-            setError(error);
-          });
-          
-      fetch('https://api.github.com/users/glitchwizard/repos?sort=updated')
-        .then(res => res.json())
-        .then(
-          (result) => {
-            setareGitHubReposLoaded(true);
-            setgitHubRepos(result.slice(0,20));
-            localUserInfo.repos = result;
-            console.log(localUserInfo);
-          },
-          (err) => {
-            setareGitHubReposLoaded(true);
-            setError(err);
-          });
-    }
-  });
-  
   return (
-    <div className={styles.Portfolio}>
-      <div className={styles.portfolioBlockContainerWrapper}>
-        <h1>PORTFOLIO</h1>
-        <hr style={{ margin: '25px' }} />
-        {error ? error : ''} 
-        <div className={styles.portfolioBlockContainer}>
-          <div className={styles.portfolioBlockContainer}>
+    <Box id='PortfolioBox'>
+      <Grid container 
+        spacing={1} 
+        direction='row'
+        justifyContent='center'
+        alignItems='flex-start'
+        id='PortfolioGridContainer'
+      >
+        <Grid item xs={10} md={8} lg={10}>
+          <Typography variant='h1'>
+            PORTFOLIO
+          </Typography>
+        </Grid>
+        <Grid item xs={10} md={12}>
+          <hr style={{ margin: '25px' }} />
+        </Grid>
+        <Grid item xs={12}>
+          <PortfolioMenu 
+            handleIsActive={handleIsActive} 
+            isActive={isActive}
+          />
+        </Grid>
+        <Grid item 
+          xs={12} 
+          md={!isActive['Art'] ? 12 : 6}
+        >
+          <Collapse 
+            in={isActive['Coding']}
+            unmountOnExit
+          >
             <Coding
               cssClass={styles.portfolioInnerBlock}
               gitHubUser={gitHubUser}
               gitHubRepos={gitHubRepos}
               areGitHubReposLoaded={areGitHubReposLoaded}
               isGitHubUserLoaded={isGitHubUserLoaded}
+              isActiveTracker={isActive}
             />
-             
-            <Art cssClass={styles.portfolioInnerBlock} />
-            <Engineering cssClass={styles.portfolioOuterBlock} />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+          </Collapse>
+        </Grid>
+        <Grid item 
+          xs={12} 
+          md={!isActive['Coding'] ? 12 : 6}
+        >
+          <Collapse 
+            in={isActive['Art']}
+          >
+            <Art cssClass={styles.portfolioInnerBlock}/>
+          </Collapse>
+        </Grid>
+        <Grid item xs={10} md={10}>
+          <Collapse 
+            in={isActive['Mechanical Engineering']}
+            unmountOnExit
+          >
+            <Engineering cssClass={styles.portfolioOuterBlock}/>
+          </Collapse>
+        </Grid>
 
-Portfolio.propTypes = {
-  buttonText: PropTypes.string
+      </Grid>
+    </Box>
+  );
 };
 
 export default Portfolio;

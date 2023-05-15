@@ -2,20 +2,15 @@
     margin: 8px;
     padding-top: 15px;
     padding-bottom: 15px;
-    display: block;
 }
 
 .splashImg {
     width: 100%;
     margin-top: 0px;
     margin-bottom: 0px;
-    max-height: 500px;
-    min-height: 300px;
+    /* max-height: 400px; */
+    /* min-height: 300px; */
     overflow: hidden;
     object-fit: cover;
     border-radius: 3px;
-}
-
-.imgBlock {
-    position: relative;
 }

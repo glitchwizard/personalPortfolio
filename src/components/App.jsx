@@ -1,63 +1,42 @@
-import React, {useCallback, useEffect, useState} from 'react';
 import Splash from './Splash/Splash';
 import Portfolio from './Portfolio/Portfolio';
 import About from './About/About';
-import styles from './App.module.css';
-import Particles from 'react-particles';
-import { loadFull } from 'tsparticles';
-import {particleSettings} from './particlesSettings';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 
 const App = () => {
-
-  const [areParticlesLoaded, setAreParticlesLoaded] = useState(false);
-
-  let engine_load;
-
-  const particlesInit = useCallback(async (engine) => {
-    // console.log(engine);
-    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
-    await loadFull(engine);
-    while (engine){
-      engine_load = engine;
-      setAreParticlesLoaded(true);
-    }
-  }, []);
-
-  const particlesLoaded = useCallback(async () => {
-    // await console.log(container);
-    await setAreParticlesLoaded(true);
-  }, []);
-
-  useEffect(() => {
-    if (engine_load) {
-      setAreParticlesLoaded(true);
-    } 
-  });
-
   return (
-    <div className={styles.mainPage}>
-      {areParticlesLoaded ?
-        <Particles
-          className={styles.particleWrapper}
-          canvasClassName={styles.particleCanvas}
-          id="tsparticles"
-          init={particlesInit}
-          loaded={particlesLoaded}
-          options={ particleSettings }
-        /> :
-        <span/>
-      }
-      
-      <div className={styles.pageItems}>
-        <Splash />
-        <span id="Portfolio" />
-        <Portfolio id="Portfolio" />
-        <span id="About" />
-        <About id="About" />
-      </div>
-    </div>
+    <Box>
+      <Grid container spacing={2} 
+        justifyContent='center' 
+        id='mainPageGridContainer'
+        sx={{px: 2}}
+      >
+        <Grid item id="mainPageGridItem" zeroMinWidth>
+          <Grid container 
+            id='pageItemContainer'
+            spacing={3}
+            justifyContent='center'
+          >
+            <Grid item 
+              xs={12} 
+              md={8} 
+              id='splashContainer'
+            >
+              <Splash />
+            </Grid>
+            <Grid item xs={12} md={10}>
+              <span id="Portfolio" />
+              <Portfolio id="Portfolio" />
+            </Grid>
+            <Grid item xs={12} md={10}>
+              <span id="About" />
+              <About id="About" />
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
+    </Box>
   );
 };
 

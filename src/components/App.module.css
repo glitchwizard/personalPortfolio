@@ -5,20 +5,10 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
 .pageItems {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     z-index: 2;
 }
 
 .particleWrapper {
     z-index: -1;
     position: fixed;
-}
-
-.particleCanvas {
-}
-
-.particleStyle {
 }
