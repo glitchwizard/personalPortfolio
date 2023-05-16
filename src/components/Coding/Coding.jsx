@@ -49,7 +49,7 @@ const Coding = (
         <Grid item 
           xs={12} 
           sm={12} 
-          md={isArtActive ? 12 : 12}
+          md={isArtActive ? 12 : 8}
         >
           <StoryCarousel />
         </Grid>
