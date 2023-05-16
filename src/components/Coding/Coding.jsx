@@ -3,13 +3,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Coding.module.css';
 import { GitHub } from '@mui/icons-material';
-import { Accordion, AccordionSummary, AccordionDetails, Skeleton } from '@mui/material';
+import { Accordion, AccordionSummary, AccordionDetails, Skeleton, Select, MenuItem  } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useState } from 'react';
-
+import StoryCarousel from './StoryCarousel';
 
 const Coding = (
   {cssClass, 
@@ -23,9 +23,14 @@ const Coding = (
   let isArtActive = isActiveTracker['Art'];
 
   const [expanded, setExpanded] = useState(false);
+  const [howManyRepos, setHowManyRepos] = useState(6);
 
-  const handleChange = (panel) => (event, isExpanded) => {
+  const handlePanelChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
+  };
+
+  const handleRepoQTYChange = (event) => {
+    setHowManyRepos(event.target.value);
   };
 
   return (
@@ -34,6 +39,20 @@ const Coding = (
         CODING
       </Typography> 
       <hr />
+      <Grid container spacing={2} justifyContent={'center'}>  
+        <Grid item xs={12}>
+          <Typography variant='h4'>
+            My Coding Story
+          </Typography>
+        </Grid>
+        <Grid item 
+          xs={12} 
+          sm={12} 
+          md={isArtActive ? 12 : 6}
+        >
+          <StoryCarousel />
+        </Grid>
+      </Grid>
       {isGitHubUserLoaded ?
         <Grid container 
           spacing={1} 
@@ -90,15 +109,30 @@ const Coding = (
       }
       {areGitHubReposLoaded ?
         <div>
-          <h3> Most Recently Updated Repos: </h3>
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={12} md={6} xl={6}>
+              <h3> Most Recently Updated Repos: </h3>
+            </Grid>
+            <Grid item xs={12} sm={12} md={3} xl={3} sx={{textAlign: 'right'}}>
+              <h3> Repositories: </h3>
+            </Grid>
+            <Grid item xs={12} sm={12} md={3} xl={3}>
+              <Select value={howManyRepos} onChange={handleRepoQTYChange} sx={{display: 'inline-block', width: '100%'}}>
+                <MenuItem value={6}>6 repos</MenuItem>
+                <MenuItem value={12}>12 repos</MenuItem>
+                <MenuItem value={16}>16 repos</MenuItem>
+                <MenuItem value={20}>20 repos</MenuItem>
+                <MenuItem value={30}>30 repos</MenuItem>
+              </Select>
+            </Grid>  
+          </Grid>
           <p />
           <div className={styles.repoList}>
             { (gitHubRepos[0]) ? 
               <Grid container
                 spacing={2}
               >
-
-                {gitHubRepos.slice(0,20).map((repo, index) => (
+                {gitHubRepos.slice(0,howManyRepos).map((repo, index) => (
                   <Grid item
                     key={repo.name} 
                     id={index} 
@@ -106,7 +140,7 @@ const Coding = (
                     sm={!isArtActive ? 12 : 12} 
                     md={!isArtActive ? 6 : 12} 
                     xl={!isArtActive ? 6 : 12}>
-                    <Accordion expanded={expanded === index} onChange={handleChange(index)} id='accordionRoot' >
+                    <Accordion expanded={expanded === index} onChange={handlePanelChange(index)} id='accordionRoot' >
                       <AccordionSummary
                         id='accordionSummaryRoot'
                         expandIcon={<ExpandMoreIcon />}
