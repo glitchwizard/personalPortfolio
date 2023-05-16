@@ -19,7 +19,7 @@ const StoryCarousel = () => {
       {
         'chapterNumber': 2,
         'title': 'Embracing the Unfamiliar',
-        'content': 'Charley\'s journey began with a pivotal moment—an introduction to the captivating world of full-stack web development. Recognizing the potential for growth and innovation, he pursued formal education and completed coursework in coding, C#, JavaScript, and React. This newfound passion ignited a spark within Charley, propelling them towards uncharted horizons.'
+        'content': 'Charley\'s journey began with a pivotal moment—an introduction to the captivating world of full-stack web development. Recognizing the potential for growth and innovation, he pursued formal education and completed coursework in coding, C#, Python, JavaScript, and React. This newfound passion ignited a spark within Charley, propelling them towards uncharted horizons.'
       },
       {
         'chapterNumber': 3,
